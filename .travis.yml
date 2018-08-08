@@ -1,15 +1,18 @@
 language: node_js
 
-os:
-  - linux
-  - osx
-
 node_js:
-  - "node"
-  - "lts/*"
-  - "7"
-  - "8"
+  - 8
 
-script:
-  - npm install
-  - npm run lint
+cache: yarn
+
+branches:
+  only:
+    - master
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
