@@ -22,8 +22,9 @@ const Bio = () => (
       }}
     />
     <p>
-      Written by <strong>Josh Manders</strong> who lives and works in Dubuque, Iowa building useful things.{' '}
-      <a href="https://twitter.com/joshmanders">You should follow him on Twitter</a>.
+      Written by <strong>Josh Manders</strong> who builds useful things at his company{' '}
+      <a href="https://aniftyco.com">NiftyCo</a>. You should follow him on{' '}
+      <a href="https://twitter.com/joshmanders">Twitter</a>.
     </p>
   </div>
 );
