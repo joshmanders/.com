@@ -9,6 +9,9 @@ branches:
   only:
     - master
 
+script:
+  - yarn build
+
 deploy:
   provider: pages
   github-token: $GITHUB_TOKEN
