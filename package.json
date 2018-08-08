@@ -5,7 +5,7 @@
   "author": "Josh Manders <josh@joshmanders.com>",
   "scripts": {
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "test": "echo \"Hi, mom!\";",
     "deploy": "gatsby build && gh-pages -d public"
   },
   "dependencies": {
