@@ -1,6 +1,7 @@
 ---
-title: Building a Business - Part 1
+title: Building a Business  -  Part 1
 date: '2015-08-01T00:00:00.000Z'
+path: building-a-business-part-1
 ---
 
 So one of my goals with my new setup on this site is to blog about the process of building my own business.

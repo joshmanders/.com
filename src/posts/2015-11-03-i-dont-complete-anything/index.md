@@ -1,6 +1,7 @@
 ---
 title: I don’t complete anything.
 date: '2015-11-03T00:00:00.000Z'
+path: i-dont-complete-anything
 ---
 
 There, I said it.

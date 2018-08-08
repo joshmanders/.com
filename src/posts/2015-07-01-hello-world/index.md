@@ -1,6 +1,7 @@
 ---
 title: Hello World
 date: '2015-07-01T00:00:00.000Z'
+path: hello-world
 ---
 
 This site has been through so many changes since I registered it. Lets change it again!

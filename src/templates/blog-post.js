@@ -41,14 +41,14 @@ const BlogPostTemplate = ({data, pathContext}) => {
       >
         <li>
           {pathContext.previous && (
-            <Link to={pathContext.previous.fields.slug} rel="prev">
+            <Link to={`/${pathContext.previous.frontmatter.path}`} rel="prev">
               ← {pathContext.previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
           {pathContext.next && (
-            <Link to={pathContext.next.fields.slug} rel="next">
+            <Link to={`/${pathContext.next.frontmatter.path}`} rel="next">
               {pathContext.next.frontmatter.title} →
             </Link>
           )}
@@ -68,12 +68,13 @@ export const pageQuery = graphql`
         author
       }
     }
-    post: markdownRemark(fields: {slug: {eq: $slug}}) {
+    post: markdownRemark(frontmatter: {path: {eq: $slug}}) {
       id
       html
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        path
       }
     }
   }
