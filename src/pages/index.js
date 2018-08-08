@@ -12,14 +12,14 @@ const Index = ({data}) => {
       <Bio />
       {data.posts.edges.map(({node}) => {
         return (
-          <div key={node.fields.slug}>
+          <div key={node.frontmatter.path}>
             <h3
               style={{
                 marginBottom: typography.rhythm(1 / 8),
               }}
             >
-              <Link style={{boxShadow: 'none'}} to={node.fields.slug}>
-                {get(node, 'frontmatter.title', node.fields.slug)}
+              <Link style={{boxShadow: 'none'}} to={node.frontmatter.path}>
+                {get(node, 'frontmatter.title', node.frontmatter.path)}
               </Link>
             </h3>
             <small>{node.frontmatter.date}</small>
@@ -44,12 +44,10 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt
-          fields {
-            slug
-          }
           frontmatter {
-            date(formatString: "DD MMMM, YYYY")
             title
+            date(formatString: "MMMM DD, YYYY")
+            path
           }
         }
       }
