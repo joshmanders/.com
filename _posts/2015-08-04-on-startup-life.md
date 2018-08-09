@@ -1,6 +1,6 @@
 ---
 title: On Startup Life
-date: '2015-08-04T00:00:00.000Z'
+date: 2015-08-04T00:00:00.000Z
 path: on-startup-life
 ---
 

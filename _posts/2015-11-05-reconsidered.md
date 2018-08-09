@@ -1,6 +1,6 @@
 ---
 title: Reconsidered.
-date: '2015-11-05T00:00:00.000Z'
+date: 2015-11-05T00:00:00.000Z
 path: reconsidered
 ---
 

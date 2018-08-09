@@ -1,6 +1,6 @@
 ---
 title: Hello World
-date: '2015-07-01T00:00:00.000Z'
+date: 2015-07-01T00:00:00.000Z
 path: hello-world
 ---
 
