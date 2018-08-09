@@ -16,6 +16,7 @@ module.exports = {
     },
   },
   rules: {
+    'no-unused-expressions': 'off',
     'import/extensions': 'off',
     'react/prop-types': 'off',
     'react/no-danger': 'off',
