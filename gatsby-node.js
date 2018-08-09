@@ -1,22 +1,25 @@
-const path = require('path');
-const _ = require('lodash');
+const {join} = require('path');
+const each = require('lodash/each');
 const Promise = require('bluebird');
 const {createFilePath} = require('gatsby-source-filesystem');
 
-exports.createPages = ({graphql, boundActionCreators}) => {
-  const {createPage} = boundActionCreators;
-
+exports.createPages = ({graphql, boundActionCreators: action}) => {
   return new Promise((resolve, reject) => {
     resolve(
       graphql(
         `
           {
-            posts: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}, limit: 1000) {
+            posts: allMarkdownRemark(
+              sort: {fields: [frontmatter___date], order: DESC}
+              limit: 1000
+              filter: {frontmatter: {draft: {ne: true}}}
+            ) {
               edges {
                 node {
                   frontmatter {
                     title
                     path
+                    draft
                   }
                 }
               }
@@ -25,41 +28,29 @@ exports.createPages = ({graphql, boundActionCreators}) => {
         `
       ).then((result) => {
         if (result.errors) {
-          console.log(result.errors);
+          process.stderr.write(`${result.errors}`);
           return reject(result.errors);
         }
 
         // Create blog posts pages.
-        const posts = result.data.posts.edges;
-
-        return _.each(posts, (post, index) => {
-          const previous = index === posts.length - 1 ? null : posts[index + 1].node;
-          const next = index === 0 ? null : posts[index - 1].node;
-
-          return createPage({
+        return each(result.data.posts.edges, (post, index, posts) =>
+          action.createPage({
             path: post.node.frontmatter.path,
-            component: path.resolve('./src/templates/blog-post.js'),
+            component: join(__dirname, 'src/templates/blog-post.js'),
             context: {
               slug: post.node.frontmatter.path,
-              previous,
-              next,
+              previous: index === posts.length - 1 ? null : posts[index + 1].node,
+              next: index === 0 ? null : posts[index - 1].node,
             },
-          });
-        });
+          })
+        );
       })
     );
   });
 };
 
-exports.onCreateNode = ({node, boundActionCreators, getNode}) => {
-  const {createNodeField} = boundActionCreators;
-
+exports.onCreateNode = ({node, boundActionCreators: action, getNode}) => {
   if (node.internal.type === 'MarkdownRemark') {
-    const value = createFilePath({node, getNode});
-    createNodeField({
-      name: 'slug',
-      node,
-      value,
-    });
+    action.createNodeField({name: 'slug', node, value: createFilePath({node, getNode})});
   }
 };
