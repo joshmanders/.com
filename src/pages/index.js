@@ -3,7 +3,6 @@ import Link from 'gatsby-link';
 import get from 'lodash/get';
 import Helmet from 'react-helmet';
 import Bio from '../components/Bio';
-import typography from '../utils/typography';
 
 const Index = ({data}) => (
   <div>
@@ -16,11 +15,7 @@ const Index = ({data}) => (
     {data.posts.edges.map(({node}) => {
       return (
         <div key={node.frontmatter.path}>
-          <h3
-            style={{
-              marginBottom: typography.rhythm(1 / 8),
-            }}
-          >
+          <h3>
             <Link style={{boxShadow: 'none'}} to={node.frontmatter.path}>
               {get(node, 'frontmatter.title', node.frontmatter.path)}
             </Link>
