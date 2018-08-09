@@ -1,15 +1,36 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link, graphql} from 'gatsby';
+import styled from 'react-emotion';
 import Template from '../components/Template';
 import Bio from '../components/Bio';
+
+const Date = styled('p')`
+  font-size: 0.87055rem;
+  line-height: 1.68rem;
+  display: block;
+  margin-bottom: 1.68rem;
+  margin-top: -1.008rem;
+`;
+
+const Divider = styled('hr')`
+  margin-bottom: 1.68rem;
+`;
+
+const Pagination = styled('ul')`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0px;
+`;
 
 const BlogPost = ({data, pageContext}) => {
   const {frontmatter, html, excerpt} = data.post;
   const {title} = data.site.meta;
 
   return (
-    <Template>
+    <Template size="small">
       <Helmet>
         <html
           itemScope={true}
@@ -37,11 +58,11 @@ const BlogPost = ({data, pageContext}) => {
         <meta property="og:image" content="https://github.com/joshmanders.png" />
       </Helmet>
       <h1>{frontmatter.title}</h1>
-      <p>{frontmatter.date}</p>
+      <Date>{frontmatter.date}</Date>
       <div dangerouslySetInnerHTML={{__html: html}} />
-      <hr />
+      <Divider />
       <Bio />
-      <ul>
+      <Pagination>
         <li>
           {pageContext.previous && (
             <Link to={`/${pageContext.previous.frontmatter.path}`} rel="prev">
@@ -56,7 +77,7 @@ const BlogPost = ({data, pageContext}) => {
             </Link>
           )}
         </li>
-      </ul>
+      </Pagination>
     </Template>
   );
 };
