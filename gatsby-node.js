@@ -19,7 +19,6 @@ exports.createPages = ({graphql, boundActionCreators: action}) => {
                   frontmatter {
                     title
                     path
-                    draft
                   }
                 }
               }

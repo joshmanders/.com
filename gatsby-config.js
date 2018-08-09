@@ -1,16 +1,13 @@
 const {resolve} = require('path');
-
-const config = {
-  title: 'Thoughts, Stories & Ideas',
-  author: 'Josh Manders',
-};
+const pkg = require('./package.json');
 
 module.exports = {
   siteMetadata: {
-    title: config.title,
-    author: config.author,
-    description: 'The personal blog of Josh Manders.',
-    siteUrl: 'https://joshmanders.com/',
+    title: pkg.title,
+    description: pkg.description,
+    siteUrl: pkg.homepage,
+    author: pkg.author,
+    contributors: pkg.contributors,
   },
   plugins: [
     {
@@ -37,7 +34,6 @@ module.exports = {
             },
           },
           'gatsby-remark-prismjs',
-          'gatsby-remark-copy-linked-files',
           'gatsby-remark-smartypants',
         ],
       },
@@ -54,13 +50,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: config.title,
-        short_name: config.author,
+        name: pkg.title,
+        short_name: pkg.author.name,
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#2BAE60',
         display: 'minimal-ui',
-        icon: 'src/components/avatar.png',
+        icon: 'static/images/avatar.png',
       },
     },
     'gatsby-plugin-offline',
