@@ -10,11 +10,32 @@ const BlogPostTemplate = ({data, pathContext}) => {
 
   return (
     <div>
-      <Helmet
-        htmlAttributes={{lang: 'en'}}
-        meta={[{name: 'description', content: excerpt}]}
-        title={`${data.post.frontmatter.title} | ${title}`}
-      />
+      <Helmet>
+        <html
+          itemScope={true}
+          itemType="http://schema.org/Article"
+          prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+          lang="en"
+        />
+        <title>
+          {frontmatter.title} | {title}
+        </title>
+        <meta name="description" content={excerpt} />
+        <meta itemProp="name" content={frontmatter.title} />
+        <meta itemProp="description" content={excerpt} />
+        <meta itemProp="image" content="https://github.com/joshmanders.png" />
+        <meta name="twitter:card" value="summary" />
+        <meta name="twitter:site" content="@joshmanders" />
+        <meta name="twitter:title" content={frontmatter.title} />
+        <meta name="twitter:description" content={excerpt} />
+        <meta name="twitter:creator" content="@joshmanders" />
+        <meta name="twitter:image" content="https://github.com/joshmanders.png" />
+        <meta property="og:url" content={`https://joshmanders.com/${frontmatter.path}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={frontmatter.title} />
+        <meta property="og:description" content={excerpt} />
+        <meta property="og:image" content="https://github.com/joshmanders.png" />
+      </Helmet>
       <h1>{frontmatter.title}</h1>
       <p
         style={{
