@@ -1,18 +1,18 @@
 {
-  "name": "joshmanders-blog",
+  "name": "joshmanders",
   "description": "Thoughts, Stories & Ideas",
   "version": "8.0.0",
   "author": "Josh Manders <josh@joshmanders.com>",
   "scripts": {
     "start": "gatsby develop",
-    "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public"
+    "build": "gatsby build"
   },
   "dependencies": {
     "gatsby": "^1.9.250",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-feed": "^1.3.20",
     "gatsby-plugin-google-analytics": "^1.0.29",
+    "gatsby-plugin-manifest": "^1.0.27",
     "gatsby-plugin-offline": "^1.0.15",
     "gatsby-plugin-react-helmet": "^1.0.8",
     "gatsby-plugin-sharp": "^1.6.42",
@@ -34,7 +34,6 @@
     "eslint-config-nifty": "^0.5.1",
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-react": "^7.7.0",
-    "gh-pages": "^1.1.0",
     "prettier": "^1.12.0"
   }
 }

@@ -5,12 +5,16 @@ import Bio from '../components/Bio';
 import typography from '../utils/typography';
 
 const BlogPostTemplate = ({data, pathContext}) => {
-  const {frontmatter, html} = data.post;
+  const {frontmatter, html, excerpt} = data.post;
   const {title} = data.site.meta;
 
   return (
     <div>
-      <Helmet title={`${data.post.frontmatter.title} | ${title}`} />
+      <Helmet
+        htmlAttributes={{lang: 'en'}}
+        meta={[{name: 'description', content: excerpt}]}
+        title={`${data.post.frontmatter.title} | ${title}`}
+      />
       <h1>{frontmatter.title}</h1>
       <p
         style={{
@@ -70,6 +74,7 @@ export const pageQuery = graphql`
     }
     post: markdownRemark(frontmatter: {path: {eq: $slug}}) {
       id
+      excerpt
       html
       frontmatter {
         title

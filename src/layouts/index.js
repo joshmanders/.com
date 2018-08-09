@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import typography from '../utils/typography';
 
-const Template = ({location, children}) => {
+const Template = ({location, children, data}) => {
   const styles =
     location.pathname === '/'
       ? {
@@ -34,7 +34,7 @@ const Template = ({location, children}) => {
           }}
           to="/"
         >
-          Thoughts, Stories &amp; Ideas
+          {data.site.meta.title}
         </Link>
       </h1>
       {children()}
@@ -43,3 +43,13 @@ const Template = ({location, children}) => {
 };
 
 export default Template;
+
+export const query = graphql`
+  query LayoutIndexQuery {
+    site {
+      meta: siteMetadata {
+        title
+      }
+    }
+  }
+`;
