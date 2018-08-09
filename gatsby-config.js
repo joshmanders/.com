@@ -1,3 +1,5 @@
+const {resolve} = require('path');
+
 const config = {
   title: 'Thoughts, Stories & Ideas',
   author: 'Josh Manders',
@@ -14,7 +16,7 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/posts`,
+        path: resolve(__dirname, '_posts'),
         name: 'posts',
       },
     },
