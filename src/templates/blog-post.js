@@ -6,7 +6,7 @@ import typography from '../utils/typography';
 
 const BlogPostTemplate = ({data, pathContext}) => {
   const {frontmatter, html, excerpt} = data.post;
-  const {title} = data.site.meta;
+  const {author, title} = data.site.meta;
 
   return (
     <div>
@@ -53,7 +53,7 @@ const BlogPostTemplate = ({data, pathContext}) => {
           marginBottom: typography.rhythm(1),
         }}
       />
-      <Bio />
+      <Bio author={author} />
 
       <ul
         style={{
@@ -90,7 +90,10 @@ export const pageQuery = graphql`
     site {
       meta: siteMetadata {
         title
-        author
+        author {
+          name
+          url
+        }
       }
     }
     post: markdownRemark(frontmatter: {path: {eq: $slug}}) {

@@ -1,9 +1,8 @@
 import React from 'react';
 import 'typeface-noto-serif';
 import typography from '../utils/typography';
-import avatar from './avatar.png';
 
-const Bio = () => (
+const Bio = ({author}) => (
   <div
     style={{
       display: 'flex',
@@ -11,8 +10,8 @@ const Bio = () => (
     }}
   >
     <img
-      src={avatar}
-      alt="Josh Manders"
+      src="/images/avatar.png"
+      alt={author.name}
       style={{
         borderRadius: '9999px',
         marginRight: typography.rhythm(1 / 2),
@@ -22,9 +21,8 @@ const Bio = () => (
       }}
     />
     <p>
-      Written by <strong>Josh Manders</strong> who builds useful things at his company{' '}
-      <a href="https://aniftyco.com">NiftyCo</a>. You should follow him on{' '}
-      <a href="https://twitter.com/joshmanders">Twitter</a>.
+      Written by <strong>{author.name}</strong> who builds useful things at his company{' '}
+      <a href="https://aniftyco.com">NiftyCo</a>. You should follow him on <a href={author.url}>Twitter</a>.
     </p>
   </div>
 );
