@@ -1,6 +1,5 @@
 const {writeFile} = require('fs');
 const {join} = require('path');
-const Promise = require('bluebird');
 const stripIndent = require('strip-indent');
 const format = require('date-fns/format');
 

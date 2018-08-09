@@ -1,5 +1,5 @@
 import React from 'react';
-import 'typeface-noto-serif';
+import {StaticQuery, graphql} from 'gatsby';
 
 const Bio = ({author}) => (
   <div>
@@ -11,4 +11,20 @@ const Bio = ({author}) => (
   </div>
 );
 
-export default Bio;
+export default (props) => (
+  <StaticQuery
+    query={graphql`
+      query {
+        site {
+          meta: siteMetadata {
+            author {
+              name
+              url
+            }
+          }
+        }
+      }
+    `}
+    render={({site}) => <Bio author={site.meta.author} {...props} />}
+  />
+);
