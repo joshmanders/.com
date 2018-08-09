@@ -1,7 +1,16 @@
 import React from 'react';
 import {StaticQuery, graphql, Link} from 'gatsby';
+import styled from 'react-emotion';
 import Template from '../components/Template';
 import Bio from '../components/Bio';
+
+const Date = styled('small')`
+  font-size: 0.87055rem;
+  line-height: 1.68rem;
+  display: block;
+  margin-bottom: 0.5rem;
+  margin-top: -1.3rem;
+`;
 
 const Index = ({posts}) => (
   <Template>
@@ -14,7 +23,7 @@ const Index = ({posts}) => (
               {node.frontmatter.title}
             </Link>
           </h3>
-          <small>{node.frontmatter.date}</small>
+          <Date>{node.frontmatter.date}</Date>
           <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
         </div>
       );
