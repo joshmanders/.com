@@ -1,14 +1,15 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import Link from 'gatsby-link';
+import {Link, graphql} from 'gatsby';
+import Template from '../components/Template';
 import Bio from '../components/Bio';
 
-const BlogPostTemplate = ({data, pathContext}) => {
+const BlogPost = ({data, pageContext}) => {
   const {frontmatter, html, excerpt} = data.post;
-  const {author, title} = data.site.meta;
+  const {title} = data.site.meta;
 
   return (
-    <div>
+    <Template>
       <Helmet>
         <html
           itemScope={true}
@@ -39,38 +40,34 @@ const BlogPostTemplate = ({data, pathContext}) => {
       <p>{frontmatter.date}</p>
       <div dangerouslySetInnerHTML={{__html: html}} />
       <hr />
-      <Bio author={author} />
+      <Bio />
       <ul>
         <li>
-          {pathContext.previous && (
-            <Link to={`/${pathContext.previous.frontmatter.path}`} rel="prev">
-              ← {pathContext.previous.frontmatter.title}
+          {pageContext.previous && (
+            <Link to={`/${pageContext.previous.frontmatter.path}`} rel="prev">
+              ← {pageContext.previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li>
-          {pathContext.next && (
-            <Link to={`/${pathContext.next.frontmatter.path}`} rel="next">
-              {pathContext.next.frontmatter.title} →
+          {pageContext.next && (
+            <Link to={`/${pageContext.next.frontmatter.path}`} rel="next">
+              {pageContext.next.frontmatter.title} →
             </Link>
           )}
         </li>
       </ul>
-    </div>
+    </Template>
   );
 };
 
-export default BlogPostTemplate;
+export default BlogPost;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       meta: siteMetadata {
         title
-        author {
-          name
-          url
-        }
       }
     }
     post: markdownRemark(frontmatter: {path: {eq: $slug}}) {
