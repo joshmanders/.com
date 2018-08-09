@@ -46,7 +46,51 @@ module.exports = {
         trackingId: 'UA-55175193-7',
       },
     },
-    'gatsby-plugin-feed',
+    {
+      resolve: 'gatsby-plugin-feed',
+      options: {
+        feeds: [
+          {
+            serialize: ({query: {site, allMarkdownRemark}}) => {
+              return allMarkdownRemark.edges.map((edge) => {
+                return {
+                  ...edge.node.frontmatter,
+                  description: edge.node.excerpt,
+                  url: `${site.siteMetadata.siteUrl}/${edge.node.frontmatter.path}`,
+                  guid: `${site.siteMetadata.siteUrl}/${edge.node.frontmatter.path}`,
+                  custom_elements: [{'content:encoded': edge.node.html}],
+                };
+              });
+            },
+            query: `
+            {
+              allMarkdownRemark(
+                sort: {fields: [frontmatter___date], order: DESC}
+                filter: {frontmatter: {draft: {ne: true}}}
+                limit: 1000
+              ) {
+                edges {
+                  node {
+                    excerpt
+                    html
+                    fields {
+                      slug
+                    }
+                    frontmatter {
+                      title
+                      date
+                      path
+                    }
+                  }
+                }
+              }
+            }
+          `,
+            output: '/rss.xml',
+          },
+        ],
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
