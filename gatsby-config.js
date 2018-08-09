@@ -1,7 +1,12 @@
+const config = {
+  title: 'Thoughts, Stories & Ideas',
+  author: 'Josh Manders',
+};
+
 module.exports = {
   siteMetadata: {
-    title: 'Thoughts, Stories & Ideas',
-    author: 'Josh Manders',
+    title: config.title,
+    author: config.author,
     description: 'The personal blog of Josh Manders.',
     siteUrl: 'https://joshmanders.com/',
   },
@@ -44,6 +49,18 @@ module.exports = {
       },
     },
     'gatsby-plugin-feed',
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        name: config.title,
+        short_name: config.author,
+        start_url: '/',
+        background_color: '#ffffff',
+        theme_color: '#2BAE60',
+        display: 'minimal-ui',
+        icon: 'src/components/avatar.png',
+      },
+    },
     'gatsby-plugin-offline',
     'gatsby-plugin-react-helmet',
     {

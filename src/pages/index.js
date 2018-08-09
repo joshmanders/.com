@@ -8,7 +8,11 @@ import typography from '../utils/typography';
 const Index = ({data}) => {
   return (
     <div>
-      <Helmet title={data.site.meta.title} />
+      <Helmet
+        htmlAttributes={{lang: 'en'}}
+        meta={[{name: 'description', content: data.site.meta.description}]}
+        title={data.site.meta.title}
+      />
       <Bio />
       {data.posts.edges.map(({node}) => {
         return (
@@ -38,6 +42,7 @@ export const pageQuery = graphql`
     site {
       meta: siteMetadata {
         title
+        description
       }
     }
     posts: allMarkdownRemark(sort: {fields: [frontmatter___date], order: DESC}) {
