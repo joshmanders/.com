@@ -19,9 +19,7 @@ const Index = ({posts}) => (
       return (
         <div key={node.frontmatter.path}>
           <h3>
-            <Link style={{boxShadow: 'none'}} to={node.frontmatter.path}>
-              {node.frontmatter.title}
-            </Link>
+            <Link to={node.frontmatter.path}>{node.frontmatter.title}</Link>
           </h3>
           <Date>{node.frontmatter.date}</Date>
           <p dangerouslySetInnerHTML={{__html: node.excerpt}} />
