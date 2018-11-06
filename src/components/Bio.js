@@ -19,8 +19,23 @@ const Bio = ({author}) => (
   <Wrapper>
     <Avatar src="/images/avatar.png" alt={author.name} />
     <p>
-      Written by <strong>{author.name}</strong> who builds useful things at his company{' '}
-      <a href="https://aniftyco.com">NiftyCo</a>. You should follow him on <a href={author.url}>Twitter</a>.
+      Written by <strong>{author.name}</strong> who is building{' '}
+      <a
+        href="https://appmetrics.co"
+        title="App Metrics - Application Performance Monitoring"
+        style={{color: 'rgb(121, 74, 207)'}}
+      >
+        App Metrics
+      </a>{' '}
+      at his company{' '}
+      <a href="https://aniftyco.com" title="NiftyCo">
+        NiftyCo
+      </a>
+      . You should follow him on{' '}
+      <a href={author.url} title="Twitter" style={{color: '#1da1f2'}}>
+        Twitter
+      </a>
+      .
     </p>
   </Wrapper>
 );
