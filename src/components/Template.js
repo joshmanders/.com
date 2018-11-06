@@ -8,7 +8,7 @@ import 'typeface-noto-serif';
 const Wrapper = styled('div')`
   margin-left: auto;
   margin-right: auto;
-  max-width: 40.32rem;
+  max-width: 45.32rem;
   padding: 2.52rem 1.26rem;
 `;
 
