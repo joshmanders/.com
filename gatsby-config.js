@@ -41,9 +41,10 @@ module.exports = {
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
     {
-      resolve: 'gatsby-plugin-google-analytics',
+      resolve: 'gatsby-plugin-fathom',
       options: {
-        trackingId: 'UA-55175193-7',
+        trackingUrl: 'fathom.aniftyco.com',
+        siteId: 'RJCPE',
       },
     },
     {
