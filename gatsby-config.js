@@ -43,8 +43,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-fathom',
       options: {
-        trackingUrl: 'fathom.aniftyco.com',
-        siteId: 'RJCPE',
+        siteId: 'POZBIVIH',
       },
     },
     {
