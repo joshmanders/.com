@@ -28,7 +28,7 @@ const Bio = ({author}) => (
         App Metrics
       </a>{' '}
       at his company{' '}
-      <a href="https://aniftyco.com" title="NiftyCo">
+      <a href="https://aniftyco.com" title="NiftyCo" style={{color: '#319795'}}>
         NiftyCo
       </a>
       . You should follow him on{' '}
