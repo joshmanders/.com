@@ -1,7 +1,7 @@
+const pkg = require('./package.json');
+
 module.exports = {
-  siteMetadata: {
-    siteName: 'Thoughts, Stories & Ideas',
-  },
+  siteMetadata: { ...pkg },
   plugins: [
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',

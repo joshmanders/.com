@@ -107,7 +107,7 @@ const Post: FunctionComponent<IPostProps> = ({
             {timeToRead} {timeToRead === 1 ? 'minute' : 'minutes'} to read
           </span>
         </div>
-        <div className="mt-4 md:mt-6 text-normal md:text-xl content" dangerouslySetInnerHTML={{ __html: html }} />
+        <div className="mt-4 md:mt-6 markdown-rendered" dangerouslySetInnerHTML={{ __html: html }} />
       </article>
       <Bio className="mt-6 md:mt-12 mb-8 md:mb-16 pt-6 border-t-2" />
       <ul className="mb-4 md:mb-6 flex flex-col md:flex-row md:flex-wrap md:justify-between">
