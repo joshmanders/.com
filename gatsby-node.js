@@ -1,19 +1,15 @@
-const {join} = require('path');
+const { join } = require('path');
 const each = require('lodash/each');
 const Promise = require('bluebird');
-const {createFilePath} = require('gatsby-source-filesystem');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.createPages = ({graphql, actions}) => {
+exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     resolve(
       graphql(
         `
           query {
-            posts: allMarkdownRemark(
-              sort: {fields: [frontmatter___date], order: DESC}
-              filter: {frontmatter: {draft: {ne: true}}}
-              limit: 1000
-            ) {
+            posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
               edges {
                 node {
                   frontmatter {
@@ -35,7 +31,7 @@ exports.createPages = ({graphql, actions}) => {
         return each(result.data.posts.edges, (post, index, posts) =>
           actions.createPage({
             path: post.node.frontmatter.path,
-            component: join(__dirname, 'src/components/BlogPost.js'),
+            component: join(__dirname, 'src/components/Post.tsx'),
             context: {
               slug: post.node.frontmatter.path,
               previous: index === posts.length - 1 ? null : posts[index + 1].node,
@@ -48,8 +44,8 @@ exports.createPages = ({graphql, actions}) => {
   });
 };
 
-exports.onCreateNode = ({node, actions, getNode}) => {
+exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === 'MarkdownRemark') {
-    actions.createNodeField({name: 'slug', node, value: createFilePath({node, getNode})});
+    actions.createNodeField({ name: 'slug', node, value: createFilePath({ node, getNode }) });
   }
 };

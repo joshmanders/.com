@@ -1,6 +1,7 @@
 ---
 title: Reconsidered.
-date: 2015-11-05T00:00:00.000Z
+description: You'll never beat X or Y company.
+date: 2015-11-05
 path: reconsidered
 ---
 

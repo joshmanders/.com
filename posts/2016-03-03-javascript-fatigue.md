@@ -1,6 +1,7 @@
 ---
 title: Why You’re Experiencing JavaScript Fatigue.
-date: 2016-03-03T00:00:00.000Z
+description: You don't have to be a bandwagon jumper.
+date: 2016-03-03
 path: javascript-fatigue
 ---
 
