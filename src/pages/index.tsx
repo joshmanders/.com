@@ -1,5 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React, { Fragment, FunctionComponent } from 'react';
+import Helmet from 'react-helmet';
 import { Bio, Shell } from '../components';
 
 const GET_POSTS_QUERY = graphql`
@@ -40,6 +41,9 @@ const IndexPage: FunctionComponent = () => {
 
   return (
     <Shell>
+      <Helmet>
+        <title>Thoughts, Stories &amp; Ideas - Josh Manders</title>
+      </Helmet>
       <Fragment>
         <h1 className="text-2xl md:text-5xl font-semibold mb-8">Thoughts, Stories &amp; Ideas</h1>
         <Bio className="mb-8 md:mb-16" />

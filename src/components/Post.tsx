@@ -1,5 +1,6 @@
 import { graphql, Link } from 'gatsby';
 import React, { FunctionComponent } from 'react';
+import Helmet from 'react-helmet';
 import { Bio } from './Bio';
 import { Shell } from './Shell';
 
@@ -28,6 +29,7 @@ interface IPostProps {
         title: string;
         description: string;
         date: string;
+        path: string;
       };
       html: string;
       timeToRead: number;
@@ -55,7 +57,7 @@ interface IPostProps {
 const Post: FunctionComponent<IPostProps> = ({
   data: {
     post: {
-      frontmatter: { title, date },
+      frontmatter: { title, description, date, path },
       html,
       timeToRead,
       wordCount: { words },
@@ -65,6 +67,30 @@ const Post: FunctionComponent<IPostProps> = ({
 }) => {
   return (
     <Shell>
+      <Helmet>
+        <html
+          itemScope={true}
+          itemType="http://schema.org/Article"
+          prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+          lang="en"
+        />
+        <title>{title} | Thoughts, Stories &amp; Ideas - Josh Manders</title>
+        <meta name="description" content={description} />
+        <meta itemProp="name" content={title} />
+        <meta itemProp="description" content={description} />
+        <meta itemProp="image" content="https://github.com/joshmanders.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@joshmanders" />
+        <meta name="twitter:title" content={title} />
+        <meta name="twitter:description" content={description} />
+        <meta name="twitter:creator" content="@joshmanders" />
+        <meta name="twitter:image" content="https://github.com/joshmanders.png" />
+        <meta property="og:url" content={`https://joshmanders.com/${path}`} />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={title} />
+        <meta property="og:description" content={description} />
+        <meta property="og:image" content="https://github.com/joshmanders.png" />
+      </Helmet>
       <h3 className="text-lg md:text-2xl font-semibold mb-4">
         <Link to="/" title="Thoughts, Stories &amp; Ideas">
           Thoughts, Stories &amp; Ideas
