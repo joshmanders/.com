@@ -49,15 +49,19 @@ const IndexPage: FunctionComponent = () => {
         <Bio className="mb-16" />
         <section>
           <h3 className="text-3xl font-semibold mb-4">Things I Wrote</h3>
-          {posts.edges.map(({ node }) => {
+          {posts.edges.map(({ node: post }) => {
             return (
-              <article className="mb-6" key={node.frontmatter.path}>
+              <article className="mb-6" key={post.frontmatter.path}>
                 <h2 className="text-3xl mb-2">
-                  <Link className="border-b-2 border-brand hover:text-brand" to={node.frontmatter.path}>
-                    {node.frontmatter.title}
+                  <Link
+                    className="border-b-2 border-brand hover:text-brand"
+                    to={post.frontmatter.path}
+                    title={post.frontmatter.title}
+                  >
+                    {post.frontmatter.title}
                   </Link>
                 </h2>
-                <p className="text-xl italic">{node.frontmatter.description}</p>
+                <p className="text-xl italic">{post.frontmatter.description}</p>
               </article>
             );
           })}
