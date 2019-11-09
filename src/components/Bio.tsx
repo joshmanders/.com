@@ -7,8 +7,11 @@ interface IBioProps {
 
 export const Bio: FunctionComponent<IBioProps> = ({ className }) => (
   <div className={classNames('flex items-center', className)}>
-    <img src="https://github.com/joshmanders.png" className="rounded-full w-16 h-16 mr-4" />
-    <p className="text-lg">
+    <img
+      src="https://github.com/joshmanders.png"
+      className="rounded-lg md:rounded-full w-24 h-24 md:w-16 md:h-16 mr-4"
+    />
+    <p className="md:text-lg leading-relaxed">
       Written by <strong>Josh Manders</strong> who is building{' '}
       <a
         href="https://appmetrics.co"

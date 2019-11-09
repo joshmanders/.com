@@ -9,11 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
       graphql(
         `
           query {
-            posts: allMarkdownRemark(
-              sort: { fields: [frontmatter___date], order: DESC }
-              filter: { frontmatter: { draft: { ne: true } } }
-              limit: 1000
-            ) {
+            posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
               edges {
                 node {
                   frontmatter {

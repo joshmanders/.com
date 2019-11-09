@@ -1,7 +1,7 @@
 ---
 title: Failure of Launching in Under a Week.
 description: A whoopsy daisy. I failed.
-date: 2018-11-06T19:30:14.167Z
+date: 2018-11-06
 path: launch-failure
 ---
 

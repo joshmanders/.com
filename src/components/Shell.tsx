@@ -11,8 +11,8 @@ export const Shell: FunctionComponent<IShellProps> = ({ children }) => {
   return (
     <Fragment>
       <Helmet htmlAttributes={{ lang: 'en' }} />
-      <div className="w-screen h-screen border border-t-8 border-brand py-16 font-serif antialiased">
-        <div className="mx-auto max-w-3xl">{children}</div>
+      <div className="border-t-8 border-brand py-8 md:py-16 font-serif antialiased">
+        <div className="mx-4 md:mx-auto md:max-w-3xl">{children}</div>
       </div>
     </Fragment>
   );

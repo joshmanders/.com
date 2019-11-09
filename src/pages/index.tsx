@@ -4,11 +4,7 @@ import { Bio, Shell } from '../components';
 
 const GET_POSTS_QUERY = graphql`
   query IndexQuery {
-    posts: allMarkdownRemark(
-      sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter: { draft: { ne: true } } }
-      limit: 10
-    ) {
+    posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 10) {
       edges {
         node {
           frontmatter {
@@ -45,14 +41,14 @@ const IndexPage: FunctionComponent = () => {
   return (
     <Shell>
       <Fragment>
-        <h1 className="text-5xl font-semibold mb-8">Thoughts, Stories &amp; Ideas</h1>
-        <Bio className="mb-16" />
+        <h1 className="text-2xl md:text-5xl font-semibold mb-8">Thoughts, Stories &amp; Ideas</h1>
+        <Bio className="mb-8 md:mb-16" />
         <section>
-          <h3 className="text-3xl font-semibold mb-4">Things I Wrote</h3>
+          <h3 className="text-2xl md:text-3xl font-semibold mb-4">Things I Wrote</h3>
           {posts.edges.map(({ node: post }) => {
             return (
               <article className="mb-6" key={post.frontmatter.path}>
-                <h2 className="text-3xl mb-2">
+                <h2 className="text-xl md:text-3xl mb-2">
                   <Link
                     className="border-b-2 border-brand hover:text-brand"
                     to={post.frontmatter.path}
@@ -61,7 +57,7 @@ const IndexPage: FunctionComponent = () => {
                     {post.frontmatter.title}
                   </Link>
                 </h2>
-                <p className="text-xl italic">{post.frontmatter.description}</p>
+                <p className="md:text-xl italic">{post.frontmatter.description}</p>
               </article>
             );
           })}
