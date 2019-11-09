@@ -6,7 +6,7 @@ module.exports = {
     'gatsby-plugin-typescript',
     'gatsby-plugin-postcss',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-robots-txt',
+    // 'gatsby-plugin-robots-txt',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
