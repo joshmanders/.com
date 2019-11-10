@@ -102,7 +102,7 @@ const Post: FunctionComponent<IPostProps> = ({
       <article>
         <h1 className="text-xl md:text-3xl font-semibold">{title}</h1>
         <div className="text-sm md:text-normal my-2 italic">
-          <span>{format(Date.parse(date), 'LLLL do, yyyy')}</span>
+          <span>{format(new Date(`${date} 00:00`), 'LLLL do, yyyy')}</span>
           <span className="mx-2">-</span>
           <span>{words} words</span>
           <span className="mx-2">-</span>
