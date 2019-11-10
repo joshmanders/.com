@@ -47,7 +47,28 @@ const IndexPage: FunctionComponent = () => {
   return (
     <Shell>
       <Helmet>
+        <html
+          itemScope={true}
+          itemType="http://schema.org/Article"
+          prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
+          lang="en"
+        />
         <title>Thoughts, Stories &amp; Ideas - Josh Manders</title>
+        <meta name="description" content="From the mind of Josh Manders" />
+        <meta itemProp="name" content="Thoughts, Stories &amp; Ideas" />
+        <meta itemProp="description" content="From the mind of Josh Manders" />
+        <meta itemProp="image" content="https://github.com/joshmanders.png" />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:site" content="@joshmanders" />
+        <meta name="twitter:title" content="Thoughts, Stories &amp; Ideas" />
+        <meta name="twitter:description" content="From the mind of Josh Manders" />
+        <meta name="twitter:creator" content="@joshmanders" />
+        <meta name="twitter:image" content="https://github.com/joshmanders.png" />
+        <meta property="og:url" content="https://joshmanders.com/" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content="Thoughts, Stories &amp; Ideas" />
+        <meta property="og:description" content="From the mind of Josh Manders" />
+        <meta property="og:image" content="https://github.com/joshmanders.png" />
       </Helmet>
       <Fragment>
         <h1 className="text-2xl md:text-5xl font-semibold mb-8">Thoughts, Stories &amp; Ideas</h1>
