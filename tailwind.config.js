@@ -1,18 +1,21 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
+const joshTheme = {
+  colors: {
+    brand: '#25ae60',
+    appmetrics: defaultTheme.colors.purple[700],
+    niftyco: defaultTheme.colors.teal[700],
+    merched: defaultTheme.colors.blue[700],
+    twitter: '#1da1f2',
+  },
+  fontFamily: {
+    serif: ['"Noto Serif"', ...defaultTheme.fontFamily['serif']],
+  },
+};
+
 module.exports = {
   theme: {
-    extend: {
-      colors: {
-        brand: '#25ae60',
-        appmetrics: '#6b46c1',
-        niftyco: '#319795',
-        twitter: '#1da1f2',
-      },
-      fontFamily: {
-        serif: ['"Noto Serif"', ...defaultTheme.fontFamily['serif']],
-      },
-    },
+    extend: joshTheme,
     typography: {
       h1: {
         fontSize: defaultTheme.fontSize['2xl'],
@@ -48,10 +51,28 @@ module.exports = {
       },
       a: {
         fontWeight: defaultTheme.fontWeight['medium'],
-        borderBottom: 'solid 2px #25ae60',
+        borderBottom: `solid 2px ${joshTheme.colors.brand}`,
+        'a:hover': {
+          color: joshTheme.colors.brand,
+        },
       },
-      'a:hover': {
-        color: '#25ae60',
+      'a[href^="https://appmetrics.co"]': {
+        borderBottomColor: joshTheme.colors['appmetrics'],
+      },
+      'a[href^="https://appmetrics.co"]:hover': {
+        color: joshTheme.colors['appmetrics'],
+      },
+      'a[href^="https://aniftyco.com"]': {
+        borderBottomColor: joshTheme.colors['niftyco'],
+      },
+      'a[href^="https://aniftyco.com"]:hover': {
+        color: joshTheme.colors['niftyco'],
+      },
+      'a[href^="https://merched.com"]': {
+        borderBottomColor: joshTheme.colors['merched'],
+      },
+      'a[href^="https://merched.com"]:hover': {
+        color: joshTheme.colors['merched'],
       },
       code: {
         backgroundColor: defaultTheme.colors.gray[200],
@@ -64,7 +85,7 @@ module.exports = {
         marginBottom: defaultTheme.spacing[8],
       },
       ol: {
-        listStyleType: 'decimal',
+        listStyleType: defaultTheme.listStyleType['decimal'],
         paddingLeft: defaultTheme.spacing[5],
       },
       '* + ol': {
@@ -77,7 +98,7 @@ module.exports = {
         marginTop: defaultTheme.spacing[2],
       },
       ul: {
-        listStyleType: 'disc',
+        listStyleType: defaultTheme.listStyleType['disc'],
         paddingLeft: defaultTheme.spacing[5],
       },
       '* + ul': {
@@ -109,7 +130,7 @@ module.exports = {
       },
       blockquote: {
         fontStyle: 'italic',
-        color: 'hsla(0, 0%, 0%, 0.79)',
+        color: defaultTheme.colors.gray[700],
         borderLeftWidth: defaultTheme.borderWidth[4],
         borderLeftStyle: 'solid',
         borderLeftColor: defaultTheme.colors.gray[900],
@@ -136,7 +157,7 @@ module.exports = {
       },
       'pre code': {
         fontSize: defaultTheme.fontSize['sm'],
-        padding: 0,
+        padding: defaultTheme.spacing[0],
       },
     },
   },
