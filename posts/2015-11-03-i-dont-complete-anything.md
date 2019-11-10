@@ -1,8 +1,6 @@
 ---
 title: I don’t complete anything.
 description: There, I said it.
-date: 2015-11-03
-path: i-dont-complete-anything
 ---
 
 There, I said it.

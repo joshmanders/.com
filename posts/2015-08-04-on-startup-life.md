@@ -1,8 +1,6 @@
 ---
 title: On Startup Life.
 description: Dreams and goals of the hacker lifestyle at a startup.
-date: 2015-08-04
-path: on-startup-life
 ---
 
 My dream was to own or work for a great startup. A little over a year and a half ago, that dream came true and I started working for a startup. I was in heaven, the hacker startup life.. Oh boy did that sound amazing! Long days doing what I loved, coding in an office with other like minded people doing the same thing. Group outings as we take a small break and go grab some dinner, or do something together. We even had a beer pong table in the office. It was awesome!

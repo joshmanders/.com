@@ -1,8 +1,6 @@
 ---
 title: Reconsidered.
 description: You'll never beat X or Y company.
-date: 2015-11-05
-path: reconsidered
 ---
 
 DHH of [Basecamp](http://basecamp.com/) (formerly 37Signals) wrote a rant that is making it’s rounds called [Reconsider](https://medium.com/@dhh/reconsider-41adf356857f) that is really resonating with me.

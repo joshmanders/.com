@@ -5,13 +5,17 @@ import { Bio, Shell } from '../components';
 
 const GET_POSTS_QUERY = graphql`
   query IndexQuery {
-    posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }, limit: 10) {
+    posts: allMarkdownRemark(sort: { fields: fields___slug, order: DESC }) {
       edges {
         node {
           frontmatter {
             title
             description
-            path
+          }
+          parent {
+            ... on File {
+              name
+            }
           }
         }
       }
@@ -21,11 +25,12 @@ const GET_POSTS_QUERY = graphql`
 
 interface IEdgeNode {
   node: {
-    exerpt: string;
     frontmatter: {
       title: string;
       description: string;
-      path: string;
+    };
+    parent: {
+      name: string;
     };
   };
 }
@@ -50,14 +55,11 @@ const IndexPage: FunctionComponent = () => {
         <section>
           <h3 className="text-xl md:text-3xl font-semibold mb-4">Things I Wrote</h3>
           {posts.edges.map(({ node: post }) => {
+            const [, , slug] = /^(\d{4}-\d{2}-\d{2})-(.+)$/.exec(post.parent.name);
             return (
-              <article className="mb-8" key={post.frontmatter.path}>
+              <article className="mb-8" key={slug}>
                 <h2 className="text-xl md:text-2xl mb-2">
-                  <Link
-                    className="border-b-2 border-brand hover:text-brand"
-                    to={post.frontmatter.path}
-                    title={post.frontmatter.title}
-                  >
+                  <Link className="border-b-2 border-brand hover:text-brand" to={slug} title={post.frontmatter.title}>
                     {post.frontmatter.title}
                   </Link>
                 </h2>

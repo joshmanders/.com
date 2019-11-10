@@ -1,3 +1,4 @@
+import { format } from 'date-fns';
 import { graphql, Link } from 'gatsby';
 import React, { FunctionComponent } from 'react';
 import Helmet from 'react-helmet';
@@ -6,12 +7,10 @@ import { Shell } from './Shell';
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
-    post: markdownRemark(frontmatter: { path: { eq: $slug } }) {
+    post: markdownRemark(fields: { slug: { eq: $slug } }) {
       frontmatter {
         title
         description
-        date(formatString: "MMMM DD, YYYY")
-        path
       }
       html
       timeToRead
@@ -28,8 +27,6 @@ interface IPostProps {
       frontmatter: {
         title: string;
         description: string;
-        date: string;
-        path: string;
       };
       html: string;
       timeToRead: number;
@@ -39,15 +36,21 @@ interface IPostProps {
     };
   };
   pageContext: {
+    slug: string;
+    date: string;
     previous?: {
+      parent: {
+        name: string;
+      };
       frontmatter: {
-        path: string;
         title: string;
       };
     };
     next?: {
+      parent: {
+        name: string;
+      };
       frontmatter: {
-        path: string;
         title: string;
       };
     };
@@ -57,13 +60,13 @@ interface IPostProps {
 const Post: FunctionComponent<IPostProps> = ({
   data: {
     post: {
-      frontmatter: { title, description, date, path },
+      frontmatter: { title, description },
       html,
       timeToRead,
       wordCount: { words },
     },
   },
-  pageContext: { previous: prevPage, next: nextPage },
+  pageContext: { slug, date, previous, next },
 }) => {
   return (
     <Shell>
@@ -85,7 +88,7 @@ const Post: FunctionComponent<IPostProps> = ({
         <meta name="twitter:description" content={description} />
         <meta name="twitter:creator" content="@joshmanders" />
         <meta name="twitter:image" content="https://github.com/joshmanders.png" />
-        <meta property="og:url" content={`https://joshmanders.com/${path}`} />
+        <meta property="og:url" content={`https://joshmanders.com/${slug}`} />
         <meta property="og:type" content="article" />
         <meta property="og:title" content={title} />
         <meta property="og:description" content={description} />
@@ -99,7 +102,7 @@ const Post: FunctionComponent<IPostProps> = ({
       <article>
         <h1 className="text-xl md:text-3xl font-semibold">{title}</h1>
         <div className="text-sm md:text-normal my-2 italic">
-          <span>{date}</span>
+          <span>{format(Date.parse(date), 'LLLL do, yyyy')}</span>
           <span className="mx-2">-</span>
           <span>{words} words</span>
           <span className="mx-2">-</span>
@@ -112,26 +115,24 @@ const Post: FunctionComponent<IPostProps> = ({
       <Bio className="mt-6 md:mt-12 mb-8 md:mb-16 pt-6 border-t-2" />
       <ul className="mb-4 md:mb-6 flex flex-col md:flex-row md:flex-wrap md:justify-between">
         <li className="mb-2 md:mb-0 self-center md:self-auto">
-          {prevPage && (
+          {previous && (
             <Link
-              to={prevPage.frontmatter.path}
+              to={previous.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '$2')}
               className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
-              rel="prev"
-              title={`Previous: ${prevPage.frontmatter.title}`}
+              title={`Previous: ${previous.frontmatter.title}`}
             >
-              ← {prevPage.frontmatter.title}
+              ← {previous.frontmatter.title}
             </Link>
           )}
         </li>
         <li className="mt-2 md:mt-0 self-center md:self-auto">
-          {nextPage && (
+          {next && (
             <Link
-              to={nextPage.frontmatter.path}
+              to={next.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '$2')}
               className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
-              rel="nex"
-              title={`Next: ${nextPage.frontmatter.title}`}
+              title={`Next: ${next.frontmatter.title}`}
             >
-              {nextPage.frontmatter.title} →
+              {next.frontmatter.title} →
             </Link>
           )}
         </li>

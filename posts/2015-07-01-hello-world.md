@@ -1,8 +1,6 @@
 ---
 title: Hello World!
 description: This site has been through so many changes since I registered it. Lets change it again!
-date: 2015-07-01
-path: hello-world
 ---
 
 This site has been through so many changes since I registered it. Lets change it again!

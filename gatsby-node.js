@@ -6,39 +6,73 @@ const { createFilePath } = require('gatsby-source-filesystem');
 exports.createPages = ({ graphql, actions }) => {
   return new Promise((resolve, reject) => {
     resolve(
-      graphql(
-        `
-          query {
-            posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-              edges {
-                node {
-                  frontmatter {
-                    title
-                    path
+      graphql(`
+        query GetBlogPosts {
+          posts: allMarkdownRemark(sort: { fields: [fields___slug], order: DESC }) {
+            edges {
+              node {
+                fields {
+                  slug
+                }
+                parent {
+                  ... on File {
+                    name
                   }
+                }
+                frontmatter {
+                  title
+                }
+              }
+              previous {
+                fields {
+                  slug
+                }
+                parent {
+                  ... on File {
+                    name
+                  }
+                }
+                frontmatter {
+                  title
+                }
+              }
+              next {
+                fields {
+                  slug
+                }
+                parent {
+                  ... on File {
+                    name
+                  }
+                }
+                frontmatter {
+                  title
                 }
               }
             }
           }
-        `
-      ).then((result) => {
+        }
+      `).then((result) => {
         if (result.errors) {
           process.stderr.write(`${result.errors}`);
           return reject(result.errors);
         }
 
         // Create blog posts pages.
-        return each(result.data.posts.edges, (post, index, posts) =>
-          actions.createPage({
-            path: post.node.frontmatter.path,
+        return each(result.data.posts.edges, (post) => {
+          const [, date, path] = /^(\d{4}-\d{2}-\d{2})-(.+)$/.exec(post.node.parent.name);
+
+          return actions.createPage({
+            path: `/${path}`,
             component: join(__dirname, 'src/components/Post.tsx'),
             context: {
-              slug: post.node.frontmatter.path,
-              previous: index === posts.length - 1 ? null : posts[index + 1].node,
-              next: index === 0 ? null : posts[index - 1].node,
+              slug: post.node.fields.slug,
+              date,
+              previous: post.previous,
+              next: post.next,
             },
-          })
-        );
+          });
+        });
       })
     );
   });
