@@ -117,7 +117,7 @@ const Post: FunctionComponent<IPostProps> = ({
         <li className="mb-2 md:mb-0 self-center md:self-auto">
           {previous && (
             <Link
-              to={previous.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '$2')}
+              to={previous.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '/$2')}
               className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
               title={`Previous: ${previous.frontmatter.title}`}
             >
@@ -128,7 +128,7 @@ const Post: FunctionComponent<IPostProps> = ({
         <li className="mt-2 md:mt-0 self-center md:self-auto">
           {next && (
             <Link
-              to={next.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '$2')}
+              to={next.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '/$2')}
               className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
               title={`Next: ${next.frontmatter.title}`}
             >

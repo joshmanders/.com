@@ -59,7 +59,11 @@ const IndexPage: FunctionComponent = () => {
             return (
               <article className="mb-8" key={slug}>
                 <h2 className="text-xl md:text-2xl mb-2">
-                  <Link className="border-b-2 border-brand hover:text-brand" to={slug} title={post.frontmatter.title}>
+                  <Link
+                    className="border-b-2 border-brand hover:text-brand"
+                    to={`/${slug}`}
+                    title={post.frontmatter.title}
+                  >
                     {post.frontmatter.title}
                   </Link>
                 </h2>
