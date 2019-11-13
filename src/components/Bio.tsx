@@ -35,7 +35,7 @@ export const CompactBio: FunctionComponent = () => (
 export const LargeBio: FunctionComponent = () => (
   <div className="flex mb-8 md:mb-16">
     <img src="https://github.com/joshmanders.png" className="hidden md:block rounded-lg w-32 h-32 mr-4" />
-    <div className="md:text-lg leading-relaxed">
+    <div className="md:text-lg flex-1 leading-relaxed">
       <p className="text-2xl">Hi, I&apos;m Josh 👋</p>
       <p>
         I am a{' '}
