@@ -1,6 +1,7 @@
 ---
 title: Building a Business  -  Part 1.
 description: So one of my goals with my new setup on this site is to blog about the process of building my own business.
+date: 2015-08-01 00:00
 ---
 
 So one of my goals with my new setup on this site is to blog about the process of building my own business.

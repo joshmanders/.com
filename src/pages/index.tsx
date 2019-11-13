@@ -4,17 +4,15 @@ import { Shell, LargeBio } from '../components';
 
 const GET_POSTS_QUERY = graphql`
   query IndexQuery {
-    posts: allMarkdownRemark(sort: { fields: fields___slug, order: DESC }) {
+    posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       edges {
         node {
+          fields {
+            slug
+          }
           frontmatter {
             title
             description
-          }
-          parent {
-            ... on File {
-              name
-            }
           }
         }
       }
@@ -24,12 +22,12 @@ const GET_POSTS_QUERY = graphql`
 
 interface EdgeNode {
   node: {
+    fields: {
+      slug: string;
+    };
     frontmatter: {
       title: string;
       description: string;
-    };
-    parent: {
-      name: string;
     };
   };
 }
@@ -48,15 +46,14 @@ const IndexPage: FunctionComponent = () => {
       <h1 className="text-2xl md:text-5xl font-semibold mb-8">Thoughts, Stories &amp; Ideas</h1>
       <LargeBio />
       <section>
-        <h3 className="text-xl md:text-3xl font-semibold mb-4">Things I Wrote</h3>
+        <h3 className="text-xl md:text-3xl font-semibold mb-4">Latest Writings</h3>
         {posts.edges.map(({ node: post }) => {
-          const slug = post.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '$2');
           return (
-            <article className="mb-8" key={slug}>
+            <article className="mb-8" key={post.fields.slug}>
               <h2 className="text-xl md:text-2xl mb-2">
                 <Link
                   className="border-b-2 border-brand hover:text-brand"
-                  to={`/${slug}`}
+                  to={post.fields.slug}
                   title={post.frontmatter.title}
                 >
                   {post.frontmatter.title}

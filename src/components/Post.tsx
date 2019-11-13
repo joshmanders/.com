@@ -8,9 +8,13 @@ import { CompactBio as Bio } from './Bio';
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     post: markdownRemark(fields: { slug: { eq: $slug } }) {
+      fields {
+        slug
+      }
       frontmatter {
         title
         description
+        date
       }
       html
       timeToRead
@@ -24,9 +28,13 @@ export const pageQuery = graphql`
 interface PostProps {
   data: {
     post: {
+      fields: {
+        slug: string;
+      };
       frontmatter: {
         title: string;
         description: string;
+        date: string;
       };
       html: string;
       timeToRead: number;
@@ -36,19 +44,17 @@ interface PostProps {
     };
   };
   pageContext: {
-    slug: string;
-    date: string;
     previous?: {
-      parent: {
-        name: string;
+      fields: {
+        slug: string;
       };
       frontmatter: {
         title: string;
       };
     };
     next?: {
-      parent: {
-        name: string;
+      fields: {
+        slug: string;
       };
       frontmatter: {
         title: string;
@@ -60,13 +66,14 @@ interface PostProps {
 const Post: FunctionComponent<PostProps> = ({
   data: {
     post: {
-      frontmatter: { title, description },
+      fields: { slug },
+      frontmatter: { title, description, date },
       html,
       timeToRead,
       wordCount: { words },
     },
   },
-  pageContext: { slug, date, previous, next },
+  pageContext: { previous, next },
 }) => {
   return (
     <Fragment>
@@ -82,7 +89,7 @@ const Post: FunctionComponent<PostProps> = ({
         <article>
           <h1 className="text-xl md:text-3xl font-semibold">{title}</h1>
           <div className="text-sm md:text-normal my-2 italic">
-            <span>{format(new Date(`${date} 00:00`), 'LLLL do, yyyy')}</span>
+            <span>{format(new Date(date), 'LLLL do, yyyy')}</span>
             <span className="mx-2">-</span>
             <span>{words} words</span>
             <span className="mx-2">-</span>
@@ -95,7 +102,7 @@ const Post: FunctionComponent<PostProps> = ({
           <li className="mb-2 md:mb-0 self-center md:self-auto">
             {previous && (
               <Link
-                to={previous.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '/$2')}
+                to={previous.fields.slug}
                 className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
                 title={`Previous: ${previous.frontmatter.title}`}
               >
@@ -106,7 +113,7 @@ const Post: FunctionComponent<PostProps> = ({
           <li className="mt-2 md:mt-0 self-center md:self-auto">
             {next && (
               <Link
-                to={next.parent.name.replace(/^(\d{4}-\d{2}-\d{2})-(.+)$/, '/$2')}
+                to={next.fields.slug}
                 className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
                 title={`Next: ${next.frontmatter.title}`}
               >

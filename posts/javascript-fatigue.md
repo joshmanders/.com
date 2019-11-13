@@ -1,6 +1,7 @@
 ---
 title: Why You’re Experiencing JavaScript Fatigue.
 description: You don't have to be a bandwagon jumper.
+date: 2016-03-03 00:00
 ---
 
 There’s currently a huge phenomenon going around the JavaScript community called JavaScript Fatigue. At first this phenomenon was centered around React and it’s community and is spreading like wild fire through the Javascript community.

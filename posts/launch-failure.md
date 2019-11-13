@@ -1,6 +1,7 @@
 ---
 title: Failure of Launching in Under a Week.
 description: A whoopsy daisy. I failed.
+date: 2018-11-06 00:00
 ---
 
 A whoopsy daisy. I failed.

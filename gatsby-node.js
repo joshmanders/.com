@@ -14,11 +14,6 @@ exports.createPages = ({ graphql, actions }) => {
                 fields {
                   slug
                 }
-                parent {
-                  ... on File {
-                    name
-                  }
-                }
                 frontmatter {
                   title
                 }
@@ -27,11 +22,7 @@ exports.createPages = ({ graphql, actions }) => {
                 fields {
                   slug
                 }
-                parent {
-                  ... on File {
-                    name
-                  }
-                }
+
                 frontmatter {
                   title
                 }
@@ -39,11 +30,6 @@ exports.createPages = ({ graphql, actions }) => {
               next {
                 fields {
                   slug
-                }
-                parent {
-                  ... on File {
-                    name
-                  }
                 }
                 frontmatter {
                   title
@@ -60,14 +46,11 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Create blog posts pages.
         return each(result.data.posts.edges, (post) => {
-          const [, date, path] = /^(\d{4}-\d{2}-\d{2})-(.+)$/.exec(post.node.parent.name);
-
           return actions.createPage({
-            path: `/${path}`,
+            path: post.node.fields.slug,
             component: join(__dirname, 'src/components/Post.tsx'),
             context: {
               slug: post.node.fields.slug,
-              date,
               previous: post.previous,
               next: post.next,
             },
