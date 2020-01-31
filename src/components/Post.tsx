@@ -81,14 +81,14 @@ const Post: FunctionComponent<PostProps> = ({
         <title>{title}</title>
       </Helmet>
       <Shell meta={{ title, description, slug }}>
-        <h3 className="text-lg md:text-2xl font-semibold mb-4">
+        <h3 className="mb-4 text-lg font-semibold md:text-2xl">
           <Link to="/" title="Thoughts, Stories &amp; Ideas">
             Thoughts, Stories &amp; Ideas
           </Link>
         </h3>
         <article>
-          <h1 className="text-xl md:text-3xl font-semibold">{title}</h1>
-          <div className="text-sm md:text-normal my-2 italic">
+          <h1 className="text-xl font-semibold md:text-3xl">{title}</h1>
+          <div className="my-2 text-sm italic md:text-normal">
             <span>{format(new Date(date), 'LLLL do, yyyy')}</span>
             <span className="mx-2">-</span>
             <span>{words} words</span>
@@ -98,23 +98,23 @@ const Post: FunctionComponent<PostProps> = ({
           <div className="mt-4 md:mt-6 markdown-rendered" dangerouslySetInnerHTML={{ __html: html }} />
         </article>
         <Bio />
-        <ul className="mb-4 md:mb-6 flex flex-col md:flex-row md:flex-wrap md:justify-between">
-          <li className="mb-2 md:mb-0 self-center md:self-auto">
+        <ul className="flex flex-col mb-4 md:mb-6 md:flex-row md:flex-wrap md:justify-between">
+          <li className="self-center mb-2 md:mb-0 md:self-auto">
             {previous && (
               <Link
                 to={previous.fields.slug}
-                className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
+                className="text-sm border-b-2 border-brand hover:text-brand md:text-lg"
                 title={`Previous: ${previous.frontmatter.title}`}
               >
                 ← {previous.frontmatter.title}
               </Link>
             )}
           </li>
-          <li className="mt-2 md:mt-0 self-center md:self-auto">
+          <li className="self-center mt-2 md:mt-0 md:self-auto">
             {next && (
               <Link
                 to={next.fields.slug}
-                className="border-b-2 border-brand hover:text-brand text-sm md:text-lg"
+                className="text-sm border-b-2 border-brand hover:text-brand md:text-lg"
                 title={`Next: ${next.frontmatter.title}`}
               >
                 {next.frontmatter.title} →

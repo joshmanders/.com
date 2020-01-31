@@ -45,7 +45,7 @@ export const Shell: FunctionComponent<ShellProps> = ({
         <meta property="og:description" content={description} />
         <meta property="og:image" content="https://github.com/joshmanders.png" />
       </Helmet>
-      <div className="border-t-8 border-brand py-8 md:py-16 font-serif antialiased">
+      <div className="py-8 font-serif antialiased border-t-8 border-brand md:py-16">
         <div className="mx-4 md:mx-auto md:max-w-3xl">{children}</div>
       </div>
     </Fragment>

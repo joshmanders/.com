@@ -15,14 +15,14 @@ const NowPage: FunctionComponent = () => (
         slug: 'now',
       }}
     >
-      <h1 className="text-2xl md:text-5xl font-semibold mb-8">
+      <h1 className="mb-8 text-2xl font-semibold md:text-5xl">
         <Link to="/" title="Go back">
           Thoughts, Stories &amp; Ideas
         </Link>
       </h1>
       <LargeBio />
       <section>
-        <div className="text-sm mb-4">
+        <div className="mb-4 text-sm">
           Last updated November 12th, 2019. <br className="md:hidden" />(
           <a
             href="http://nownownow.com/about"
@@ -33,8 +33,8 @@ const NowPage: FunctionComponent = () => (
           </a>
           )
         </div>
-        <h3 className="text-xl md:text-3xl font-semibold mb-4">What have I been up to lately?</h3>
-        <ul className="list-disc list-inside md:text-xl leading-relaxed mb-12 md:mb-20">
+        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What have I been up to lately?</h3>
+        <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">Left my full time job at Nelnet, Inc.</li>
           <li className="mb-4">
             Began contracting / consulting for Node.js, React, React-Native and GraphQL work.{' '}
@@ -69,13 +69,13 @@ const NowPage: FunctionComponent = () => (
             , an application performance monitoring platform built on Google&apos;s Lighthouse.
           </li>
         </ul>
-        <h3 className="text-xl md:text-3xl font-semibold mb-4">What do I want to do?</h3>
-        <ul className="list-disc list-inside md:text-xl leading-relaxed mb-12 md:mb-20">
+        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What do I want to do?</h3>
+        <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">I hope to start streaming working on stuff on Twitch/YouTube.</li>
           <li className="mb-4">Write a course on converting a REST application to GraphQL.</li>
         </ul>
-        <h3 className="text-xl md:text-3xl font-semibold mb-4">What books am I reading?</h3>
-        <ul className="list-disc list-inside md:text-xl leading-relaxed mb-12 md:mb-20">
+        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What books am I reading?</h3>
+        <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">
             <a
               href="https://www.amazon.com/gp/product/0307465357/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=joshmanders-20&creative=9325&linkCode=as2&creativeASIN=0307465357&linkId=891d1b4f5857063b301cb0717af021eb"
@@ -104,8 +104,8 @@ const NowPage: FunctionComponent = () => (
             by <span className="italic">Rob Walling</span>
           </li>
         </ul>
-        <h3 className="text-xl md:text-3xl font-semibold mb-4">What books do I have left to read?</h3>
-        <ul className="list-disc list-inside md:text-xl leading-relaxed">
+        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What books do I have left to read?</h3>
+        <ul className="leading-relaxed list-disc list-inside md:text-xl">
           <li className="mb-4">
             <a
               href="https://www.amazon.com/gp/product/0143126563/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0143126563&linkId=327ccff351cc6e87a562ed1a2151d88f"

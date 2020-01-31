@@ -15,38 +15,24 @@ const NowPage: FunctionComponent = () => (
         slug: 'uses',
       }}
     >
-      <h1 className="text-2xl md:text-5xl font-semibold mb-8">
+      <h1 className="mb-8 text-2xl font-semibold md:text-5xl">
         <Link to="/" title="Go back">
           Thoughts, Stories &amp; Ideas
         </Link>
       </h1>
       <LargeBio />
       <section>
-        <div className="text-sm mb-4">Last updated November 12th, 2019.</div>
-        <h3 className="text-xl md:text-3xl font-semibold mb-4">My Setup</h3>
+        <div className="mb-4 text-sm">Last updated January 31st, 2020.</div>
+        <h3 className="mb-4 text-xl font-semibold md:text-3xl">My Setup</h3>
         <p className="mb-6 text-xl">
           This is a complete list of the tools, apps, services and hardware I use on a regular basis. The list contains
           tools I use in my work as a web and mobile app developer but also tools I use offline.
         </p>
-        <h3 className="text-xl md:text-2xl font-semibold mb-4">Hardware</h3>
-        <ul className="list-disc list-inside md:text-xl leading-relaxed mb-12 md:mb-20">
-          <li className="mb-4">
-            <span>MacBook Pro (15-inch, 2017)</span>
-            <ul className="list-disc list-inside ml-3 md:text-lg">
-              <li className="my-2 ml-2">
-                <strong>Processor:</strong> 2.8 Ghz Quad-Core Intel Core i7
-              </li>
-              <li className="mb-2 ml-2">
-                <strong>Memory:</strong> 16 GB 2133 MHz LPDDR3
-              </li>
-              <li className="mb-2 ml-2">
-                <strong>Graphics:</strong> Intel HD Graphics 630 1536 MB
-              </li>
-            </ul>
-          </li>
+        <h3 className="mb-4 text-xl font-semibold md:text-2xl">Hardware</h3>
+        <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">
             <span>MacBook Pro (Retina, 15-inch, Mid 2015)</span>
-            <ul className="list-disc list-inside ml-3 md:text-lg">
+            <ul className="ml-3 list-disc list-inside md:text-lg">
               <li className="my-2 ml-2">
                 <strong>Processor:</strong> 2.5 Ghz Quad-Core Intel Core i7
               </li>
@@ -69,14 +55,28 @@ const NowPage: FunctionComponent = () => (
           <li className="mb-4">Apple Watch (Series 5, 44mm Space Gray)</li>
           <li className="mb-4">AirPods (2nd Generation)</li>
         </ul>
-        <h3 className="text-xl md:text-2xl font-semibold mb-4">Software</h3>
-        <ul className="list-disc list-inside md:text-xl leading-relaxed mb-12 md:mb-20">
+        <h3 className="mb-4 text-xl font-semibold md:text-2xl">Software</h3>
+        <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">
-            <a href="https://brave.com/" title="Brave Browser" className="border-b-2 border-brand hover:text-brand">
-              Brave Browser
-            </a>{' '}
-            - Brave is my primary browser. I choose it because it is built on Chromium so it gives me the best of Chrome
-            but with better privacy.
+            <span>
+              <a href="https://brave.com/" title="Brave Browser" className="border-b-2 border-brand hover:text-brand">
+                Brave Browser
+              </a>{' '}
+              - Brave is my primary browser. I choose it because it is built on Chromium so it gives me the best of
+              Chrome but with better privacy.
+            </span>
+            <ul className="ml-3 list-disc list-inside md:text-lg">
+              <li className="my-2 ml-2">
+                <a
+                  href="https://fishshell.com/"
+                  title="Fish Shell"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Fish Shell
+                </a>{' '}
+                - Recently switched from ZSH to Fish as it has more out of the box and looks really nice.
+              </li>
+            </ul>
           </li>
           <li className="mb-4">
             <a href="https://cleanmymac.com/" title="CleanMyMac X" className="border-b-2 border-brand hover:text-brand">
@@ -262,7 +262,7 @@ const NowPage: FunctionComponent = () => (
               - I don&apos;t need anything fancy in my terminal choice, so I stick to default macOS terminal. Below are
               all the terminal based software I use.
             </span>
-            <ul className="list-disc list-inside ml-3 md:text-lg">
+            <ul className="ml-3 list-disc list-inside md:text-lg">
               <li className="my-2 ml-2">
                 <a
                   href="https://fishshell.com/"

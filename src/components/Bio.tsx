@@ -2,11 +2,11 @@ import React, { FunctionComponent } from 'react';
 import { Link } from 'gatsby';
 
 export const CompactBio: FunctionComponent = () => (
-  <div className="flex items-center mt-6 md:mt-12 mb-8 md:mb-16 pt-6 border-t-2">
+  <div className="flex items-center pt-6 mt-6 mb-8 border-t-2 md:mt-12 md:mb-16">
     <Link to="/" title="Read More" className="mr-4">
-      <img src="https://github.com/joshmanders.png" className="rounded-lg w-24 h-24 md:w-16 md:h-16" />
+      <img src="https://github.com/joshmanders.png" className="w-24 h-24 rounded-lg md:w-16 md:h-16" />
     </Link>
-    <div className="md:text-lg leading-relaxed flex-1">
+    <div className="flex-1 leading-relaxed md:text-lg">
       Written by <strong>Josh Manders</strong> who is building{' '}
       <a
         href="https://appmetrics.co"
@@ -34,8 +34,8 @@ export const CompactBio: FunctionComponent = () => (
 
 export const LargeBio: FunctionComponent = () => (
   <div className="flex mb-8 md:mb-16">
-    <img src="https://github.com/joshmanders.png" className="hidden md:block rounded-lg w-32 h-32 mr-4" />
-    <div className="md:text-lg flex-1 leading-relaxed">
+    <img src="https://github.com/joshmanders.png" className="hidden w-32 h-32 mr-4 rounded-lg md:block" />
+    <div className="flex-1 leading-relaxed md:text-lg">
       <p className="text-2xl">Hi, I&apos;m Josh 👋</p>
       <p>
         I am a{' '}
