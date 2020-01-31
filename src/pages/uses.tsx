@@ -65,16 +65,150 @@ const NowPage: FunctionComponent = () => (
               - Brave is my primary browser. I choose it because it is built on Chromium so it gives me the best of
               Chrome but with better privacy.
             </span>
+            <div className="ml-4 text-lg font-semibold">Extensions:</div>
             <ul className="ml-3 list-disc list-inside md:text-lg">
               <li className="my-2 ml-2">
                 <a
-                  href="https://fishshell.com/"
-                  title="Fish Shell"
+                  href="https://chrome.google.com/webstore/detail/1password-x-%E2%80%93-password-ma/aeblfdkhhhdcdjpifhhbdiojplfjncoa"
+                  title="1Password X"
                   className="border-b-2 border-brand hover:text-brand"
                 >
-                  Fish Shell
+                  1Password X
                 </a>{' '}
-                - Recently switched from ZSH to Fish as it has more out of the box and looks really nice.
+                - I don&apos;t sign up for anything without passwords being generated through 1Password.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/hckr-news/mnlaodleonmmfkdhfofamacceeikgecp"
+                  title="hckr news"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  hckr news
+                </a>{' '}
+                - Overall the Hacker News interface really isn&apos;t all that bad. This just enhances it with some
+                extra stuff.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj"
+                  title="Honey"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Honey
+                </a>{' '}
+                - Saving money is always good, right?
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/imgur-uploader/lcpkicdemehhmkjolekhlglljnkggfcf"
+                  title="Imgur Uploader"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Imgur Uploader
+                </a>{' '}
+                - Right click &gt; Upload to Imgur, enough said.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa"
+                  title="JSON Formatter"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  JSON Formatter
+                </a>{' '}
+                - Looking at blobs of JSON in the browser can be daunting. This makes it easier.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp"
+                  title="Minimal Twitter"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Minimal Twitter
+                </a>{' '}
+                - The new Twitter redesign is not bad, some things could be changed. This extension is how I wish the
+                actual interface would be.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp"
+                  title="OctoLinker"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  OctoLinker
+                </a>{' '}
+                - Links things up on GitHub repos.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://privacy.com/join/229LX"
+                  title="Pay by Privacy.com"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Pay by Privacy.com
+                </a>{' '}
+                - Like 1Password I also don&apos;t use my actual credit cards online. Privacy allows me to generate
+                burner cards for all online transactions.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
+                  title="React Developer Tools"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  React Developer Tools
+                </a>{' '}
+                - I work with React all day, need these tools to do my job better.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/reader-mode/llimhhconnjiflfimocjggfjdlmlhblm"
+                  title="Reader Mode"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Reader Mode
+                </a>{' '}
+                - Some sites are terrible to read on, this fixes that.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb"
+                  title="Reddit Enhancement Suite"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Reddit Enhancement Suite
+                </a>{' '}
+                - Does anyone use Reddit without RES?
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd"
+                  title="Redux DevTools"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Redux DevTools
+                </a>{' '}
+                - In the event that I am working with Redux this makes it easier.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/smile-always/jgpmhnmjbhgkhpbgelalfpplebgfjmbf"
+                  title="Smile Always"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Smile Always
+                </a>{' '}
+                - Makes me feel good knowing the FCC is getting a percentage of my transactions on Amazon.
+              </li>
+              <li className="my-2 ml-2">
+                <a
+                  href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
+                  title="Tampermonkey"
+                  className="border-b-2 border-brand hover:text-brand"
+                >
+                  Tampermonkey
+                </a>{' '}
+                - For using My Fitness Pal script for Keto.
               </li>
             </ul>
           </li>
@@ -262,6 +396,7 @@ const NowPage: FunctionComponent = () => (
               - I don&apos;t need anything fancy in my terminal choice, so I stick to default macOS terminal. Below are
               all the terminal based software I use.
             </span>
+            <div className="ml-4 text-lg font-semibold">Tools:</div>
             <ul className="ml-3 list-disc list-inside md:text-lg">
               <li className="my-2 ml-2">
                 <a
