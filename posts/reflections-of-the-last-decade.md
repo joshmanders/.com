@@ -1,7 +1,7 @@
 ---
 title: Reflections of the last decade.
 description: R.I.P. Last Decade, 2010-2020
-date: 2020-12-31 00:00
+date: 2020-01-31 00:00
 ---
 
 Another decade gone, where has all the time went?
