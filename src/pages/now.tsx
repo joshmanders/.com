@@ -23,7 +23,7 @@ const NowPage: FunctionComponent = () => (
       <LargeBio />
       <section>
         <div className="mb-4 text-sm">
-          Last updated November 12th, 2019. <br className="md:hidden" />(
+          Last updated February 18th, 2020. <br className="md:hidden" />(
           <a
             href="http://nownownow.com/about"
             title="What is a Now page?"
@@ -36,20 +36,6 @@ const NowPage: FunctionComponent = () => (
         <h3 className="mb-4 text-xl font-semibold md:text-3xl">What have I been up to lately?</h3>
         <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">Left my full time job at Nelnet, Inc.</li>
-          <li className="mb-4">
-            Began contracting / consulting for Node.js, React, React-Native and GraphQL work.{' '}
-            <span className="text-sm">
-              (
-              <a
-                href="https://full.snack.dev/for-hire"
-                className="border-b-2 border-orange-500 hover:text-orange-500"
-                title="Hire me!"
-              >
-                I&apos;m available for hire!
-              </a>
-              )
-            </span>
-          </li>
           <li className="mb-4">
             Started a low-touch SaaS product company,{' '}
             <a href="https://aniftyco.com" title="NiftyCo" className="border-b-2 border-niftyco hover:text-niftyco">
@@ -67,6 +53,17 @@ const NowPage: FunctionComponent = () => (
               App Metrics
             </a>
             , an application performance monitoring platform built on Google&apos;s Lighthouse.
+          </li>
+          <li className="mb-4">
+            Started building{' '}
+            <a
+              href="https://github.com/aniftyco/audience"
+              title="Audience - Open source mailing list management"
+              className="border-b-2 border-blue-700 hover:text-blue-700"
+            >
+              Audience
+            </a>{' '}
+            an open source mailing list management application.
           </li>
         </ul>
         <h3 className="mb-4 text-xl font-semibold md:text-3xl">What do I want to do?</h3>
