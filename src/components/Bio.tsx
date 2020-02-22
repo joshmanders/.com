@@ -38,15 +38,15 @@ export const LargeBio: FunctionComponent = () => (
     <div className="flex-1 leading-relaxed md:text-lg">
       <p className="text-2xl">Hi, I&apos;m Josh 👋</p>
       <p>
-        I am a{' '}
+        I am building{' '}
         <a
-          href="https://full.snack.dev"
-          title="Full Snack Developer"
-          className="border-b-2 border-orange-500 hover:text-orange-500"
+          href="https://appmetrics.co"
+          title="App Metrics - Application Performance Monitoring"
+          className="border-b-2 border-appmetrics hover:text-appmetrics"
         >
-          full snack developer
-        </a>{' '}
-        with over 20 years experience building web and mobile apps. You can find me on{' '}
+          App Metrics
+        </a>
+        , an application performance monitoring service. You can find me on{' '}
         <a
           href="https://twitter.com/joshmanders"
           title="Me on Twitter"
