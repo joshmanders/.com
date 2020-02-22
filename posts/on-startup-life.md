@@ -1,5 +1,5 @@
 ---
-title: On Startup Life.
+title: On Startup Life
 description: Dreams and goals of the hacker lifestyle at a startup.
 date: 2015-08-04 00:00
 ---

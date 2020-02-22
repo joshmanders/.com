@@ -1,5 +1,5 @@
 ---
-title: Why You’re Experiencing JavaScript Fatigue.
+title: Why You’re Experiencing JavaScript Fatigue
 description: You don't have to be a bandwagon jumper.
 date: 2016-03-03 00:00
 ---

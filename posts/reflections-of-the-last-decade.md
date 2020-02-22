@@ -1,5 +1,5 @@
 ---
-title: Reflections of the last decade.
+title: Reflections of the last decade
 description: R.I.P. Last Decade, 2010-2020
 date: 2020-01-31 00:00
 ---

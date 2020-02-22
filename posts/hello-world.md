@@ -1,5 +1,5 @@
 ---
-title: Hello World!
+title: Hello World
 description: This site has been through so many changes since I registered it. Lets change it again!
 date: 2015-07-01 00:00
 ---

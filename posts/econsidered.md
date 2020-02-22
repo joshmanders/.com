@@ -1,5 +1,5 @@
 ---
-title: Reconsidered.
+title: Reconsidered
 description: You'll never beat X or Y company.
 date: 2015-11-05 00:00
 ---
