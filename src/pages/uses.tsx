@@ -22,7 +22,7 @@ const NowPage: FunctionComponent = () => (
       </h1>
       <LargeBio />
       <section>
-        <div className="mb-4 text-sm">Last updated January 31st, 2020.</div>
+        <div className="mb-4 text-sm">Last updated March 5th, 2020.</div>
         <h3 className="mb-4 text-xl font-semibold md:text-3xl">My Setup</h3>
         <p className="mb-6 text-xl">
           This is a complete list of the tools, apps, services and hardware I use on a regular basis. The list contains
@@ -30,6 +30,26 @@ const NowPage: FunctionComponent = () => (
         </p>
         <h3 className="mb-4 text-xl font-semibold md:text-2xl">Hardware</h3>
         <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
+          <li className="mb-4">
+            <span>MacBook Pro (16-inch, 2019)</span>
+            <ul className="ml-3 list-disc list-inside md:text-lg">
+              <li className="my-2 ml-2">
+                <strong>Processor:</strong> 2.6 Ghz 6-Core Intel Core i7
+              </li>
+              <li className="mb-2 ml-2">
+                <strong>Memory:</strong> 16 GB 2667 MHz DDR4
+              </li>
+              <li className="mb-2 ml-2">
+                <strong>Graphics:</strong> AMD Radeon Pro 5300M 4 GB (2048x1280)
+              </li>
+              <li className="mb-2 ml-2">
+                <strong>External Display 1:</strong> 27-inch Dell P2715Q (3840x2160)
+              </li>
+              <li className="mb-2 ml-2">
+                <strong>External Display 2:</strong> 27-inch Dell P2715Q (3840x2160)
+              </li>
+            </ul>
+          </li>
           <li className="mb-4">
             <span>MacBook Pro (Retina, 15-inch, Mid 2015)</span>
             <ul className="ml-3 list-disc list-inside md:text-lg">
@@ -40,13 +60,7 @@ const NowPage: FunctionComponent = () => (
                 <strong>Memory:</strong> 16 GB 1600 MHz DDR3
               </li>
               <li className="mb-2 ml-2">
-                <strong>Graphics:</strong> AMD Radeon R9 M370X 2GB &amp; Intel Iris Pro 1536 MB
-              </li>
-              <li className="mb-2 ml-2">
-                <strong>Display 1:</strong> 27-inch Dell P2715Q (3840x2160)
-              </li>
-              <li className="mb-2 ml-2">
-                <strong>Display 2:</strong> 27-inch Dell P2715Q (3840x2160)
+                <strong>Graphics:</strong> AMD Radeon R9 M370X 2 GB (1920x1200)
               </li>
             </ul>
           </li>
