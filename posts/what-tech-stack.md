@@ -1,6 +1,6 @@
 ---
 title: What tech stack should I use?
-description: --
+description: Seems to be everyone is unsure if what they're using is correct or not.
 date: 2020-04-28 00:00
 ---
 
