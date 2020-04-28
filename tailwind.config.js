@@ -145,7 +145,7 @@ module.exports = {
         marginTop: defaultTheme.spacing[4],
       },
       pre: {
-        backgroundColor: defaultTheme.colors.gray[200],
+        backgroundColor: '#1E1E1E',
         paddingTop: defaultTheme.spacing[3],
         paddingRight: defaultTheme.spacing[4],
         paddingBottom: defaultTheme.spacing[3],
@@ -158,8 +158,13 @@ module.exports = {
         marginTop: defaultTheme.spacing[4],
       },
       'pre code': {
+        backgroundColor: 'inherit',
         fontSize: defaultTheme.fontSize['sm'],
         padding: defaultTheme.spacing[0],
+      },
+      'pre code > .grvsc-line': {
+        paddingLeft: 0,
+        paddingRight: 0,
       },
     },
   },

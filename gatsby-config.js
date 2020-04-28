@@ -1,4 +1,5 @@
 /* eslint-disable */
+const { resolve } = require('path');
 const pkg = require('./package.json');
 
 module.exports = {
@@ -11,6 +12,7 @@ module.exports = {
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-offline',
     'gatsby-plugin-sharp',
+    'gatsby-plugin-twitter',
     'gatsby-transformer-sharp',
     'gatsby-transformer-remark',
     {
@@ -29,26 +31,14 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        gatsbyRemarkPlugins: [
+        plugins: [
           'gatsby-remark-smartypants',
+          'gatsby-remark-embedder',
           {
             resolve: 'gatsby-remark-vscode',
-            // options: {
-            //   injectStyles: false,
-            //   languageAliases: {
-            //     shell: 'bash',
-            //   },
-            //   colorTheme: {
-            //     defaultTheme: 'Dracula',
-            //     prefersDarkTheme: 'Dracula',
-            //   },
-            //   extensions: [
-            //     {
-            //       identifer: 'dracula-theme.theme-dracula',
-            //       version: '2.18.1',
-            //     },
-            //   ],
-            // },
+            options: {
+              theme: 'Dark+ (default dark)',
+            },
           },
         ],
       },
