@@ -1,3 +1,4 @@
+/* eslint-disable */
 const tailwind = require('tailwindcss');
 
 module.exports = () => ({

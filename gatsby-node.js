@@ -1,3 +1,4 @@
+/* eslint-disable */
 const { join } = require('path');
 const each = require('lodash/each');
 const Promise = require('bluebird');

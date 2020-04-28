@@ -30,6 +30,7 @@ export const Shell: FunctionComponent<ShellProps> = ({
           lang="en"
         />
         <meta name="description" content={description} />
+        <link rel="icon" href="https://github.com/joshmanders.png" />
         <meta itemProp="name" content={title} />
         <meta itemProp="description" content={description} />
         <meta itemProp="image" content="https://github.com/joshmanders.png" />
@@ -45,7 +46,7 @@ export const Shell: FunctionComponent<ShellProps> = ({
         <meta property="og:description" content={description} />
         <meta property="og:image" content="https://github.com/joshmanders.png" />
       </Helmet>
-      <div className="py-8 font-serif antialiased border-t-8 border-brand md:py-16">
+      <div className="py-8 font-serif antialiased border-t-8 border-joshmanders md:py-16">
         <div className="mx-4 md:mx-auto md:max-w-3xl">{children}</div>
       </div>
     </Fragment>

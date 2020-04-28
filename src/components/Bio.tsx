@@ -9,11 +9,11 @@ export const CompactBio: FunctionComponent = () => (
     <div className="flex-1 leading-relaxed md:text-lg">
       Written by <strong>Josh Manders</strong> who is building{' '}
       <a
-        href="https://appmetrics.co"
-        title="App Metrics - Application Performance Monitoring"
-        className="border-b-2 border-appmetrics hover:text-appmetrics"
+        href="https://startaudience.com"
+        title="Connect with your Audience"
+        className="border-b-2 border-audience hover:text-audience"
       >
-        App Metrics
+        Audience
       </a>{' '}
       at his company{' '}
       <a href="https://aniftyco.com" title="NiftyCo" className="border-b-2 border-niftyco hover:text-niftyco">
@@ -40,13 +40,13 @@ export const LargeBio: FunctionComponent = () => (
       <p>
         I am building{' '}
         <a
-          href="https://appmetrics.co"
-          title="App Metrics - Application Performance Monitoring"
-          className="border-b-2 border-appmetrics hover:text-appmetrics"
+          href="https://startaudience.com"
+          title="Connect with your Audience"
+          className="border-b-2 border-audience hover:text-audience"
         >
-          App Metrics
+          Audience
         </a>
-        , an application performance monitoring service. You can find me on{' '}
+        , a mailing list management service. You can find me on{' '}
         <a
           href="https://twitter.com/joshmanders"
           title="Me on Twitter"
@@ -63,11 +63,15 @@ export const LargeBio: FunctionComponent = () => (
           Indie Hackers
         </a>
         . You can also check out{' '}
-        <a href="/uses" title="My setup" className="border-b-2 border-brand hover:text-brand">
+        <a href="/uses" title="My setup" className="border-b-2 border-joshmanders hover:text-joshmanders">
           my setup
         </a>{' '}
         or what I am{' '}
-        <a href="/now" title="What I am currently doing" className="border-b-2 border-brand hover:text-brand">
+        <a
+          href="/now"
+          title="What I am currently doing"
+          className="border-b-2 border-joshmanders hover:text-joshmanders"
+        >
           currently doing
         </a>
         .

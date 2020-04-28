@@ -1,54 +1,54 @@
 {
-    "name": "joshmanders.com",
-    "description": "Thoughts, Stories & Ideas",
-    "version": "2.0.0",
-    "homepage": "https://joshmanders.com",
-    "author": {
-        "name": "Josh Manders",
-        "email": "josh@joshmanders.com",
-        "url": "https://twitter.com/joshmanders"
-    },
-    "scripts": {
-        "start": "gatsby develop",
-        "build": "gatsby build"
-    },
-    "dependencies": {
-        "bluebird": "^3.7.2",
-        "classnames": "^2.2.6",
-        "date-fns": "^2.9.0",
-        "gatsby": "^2.19.10",
-        "gatsby-plugin-catch-links": "^2.1.24",
-        "gatsby-plugin-fathom": "^1.2.0",
-        "gatsby-plugin-manifest": "^2.2.40",
-        "gatsby-plugin-offline": "^3.0.33",
-        "gatsby-plugin-postcss": "^2.1.19",
-        "gatsby-plugin-react-helmet": "^3.1.21",
-        "gatsby-plugin-robots-txt": "^1.5.0",
-        "gatsby-plugin-sharp": "^2.4.4",
-        "gatsby-plugin-typescript": "^2.1.26",
-        "gatsby-remark-smartypants": "^2.1.20",
-        "gatsby-remark-vscode": "^1.4.0",
-        "gatsby-source-filesystem": "^2.1.35",
-        "gatsby-transformer-remark": "^2.6.49",
-        "gatsby-transformer-sharp": "^2.3.13",
-        "lodash": "^4.17.15",
-        "react": "^16.12.0",
-        "react-dom": "^16.12.0",
-        "react-helmet": "^5.2.1",
-        "tailwindcss": "^1.1.4",
-        "typeface-noto-serif": "^0.0.72"
-    },
-    "devDependencies": {
-        "@types/classnames": "^2.2.9",
-        "@types/node": "^13.5.3",
-        "@types/react": "^16.9.19",
-        "@types/react-dom": "^16.9.5",
-        "@types/react-helmet": "^5.0.15",
-        "eslint": "^6.8.0",
-        "eslint-config-nifty": "^3.0.0-rc.8",
-        "eslint-plugin-jsx-a11y": "^6.2.3",
-        "eslint-plugin-react": "^7.18.0",
-        "prettier": "^1.19.1",
-        "typescript": "^3.7.5"
-    }
+  "name": "joshmanders.com",
+  "description": "Thoughts, Stories & Ideas",
+  "version": "2.0.0",
+  "homepage": "https://joshmanders.com",
+  "author": {
+    "name": "Josh Manders",
+    "email": "josh@joshmanders.com",
+    "url": "https://twitter.com/joshmanders"
+  },
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "classnames": "^2.2.6",
+    "date-fns": "^2.9.0",
+    "gatsby": "^2.19.10",
+    "gatsby-plugin-catch-links": "^2.1.24",
+    "gatsby-plugin-fathom": "^1.2.0",
+    "gatsby-plugin-manifest": "^2.2.40",
+    "gatsby-plugin-offline": "^3.0.33",
+    "gatsby-plugin-postcss": "^2.1.19",
+    "gatsby-plugin-react-helmet": "^3.1.21",
+    "gatsby-plugin-robots-txt": "^1.5.0",
+    "gatsby-plugin-sharp": "^2.4.4",
+    "gatsby-plugin-typescript": "^2.1.26",
+    "gatsby-remark-smartypants": "^2.1.20",
+    "gatsby-remark-vscode": "^1.4.0",
+    "gatsby-source-filesystem": "^2.1.35",
+    "gatsby-transformer-remark": "^2.6.49",
+    "gatsby-transformer-sharp": "^2.3.13",
+    "lodash": "^4.17.15",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-helmet": "^5.2.1",
+    "tailwindcss": "^1.1.4",
+    "typeface-noto-serif": "^0.0.72"
+  },
+  "devDependencies": {
+    "@types/classnames": "^2.2.9",
+    "@types/node": "^13.5.3",
+    "@types/react": "^16.9.19",
+    "@types/react-dom": "^16.9.5",
+    "@types/react-helmet": "^5.0.15",
+    "eslint": "^6.8.0",
+    "eslint-config-nifty": "^3.0.0-rc.8",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "prettier": "^1.19.1",
+    "typescript": "^3.7.5"
+  }
 }

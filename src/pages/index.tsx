@@ -52,7 +52,7 @@ const IndexPage: FunctionComponent = () => {
             <article className="mb-8" key={post.fields.slug}>
               <h2 className="mb-2 text-xl md:text-2xl">
                 <Link
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                   to={post.fields.slug}
                   title={post.frontmatter.title}
                 >

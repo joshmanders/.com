@@ -73,7 +73,11 @@ const NowPage: FunctionComponent = () => (
         <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">
             <span>
-              <a href="https://brave.com/" title="Brave Browser" className="border-b-2 border-brand hover:text-brand">
+              <a
+                href="https://brave.com/"
+                title="Brave Browser"
+                className="border-b-2 border-joshmanders hover:text-joshmanders"
+              >
                 Brave Browser
               </a>{' '}
               - Brave is my primary browser. I choose it because it is built on Chromium so it gives me the best of
@@ -85,7 +89,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/1password-x-%E2%80%93-password-ma/aeblfdkhhhdcdjpifhhbdiojplfjncoa"
                   title="1Password X"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   1Password X
                 </a>{' '}
@@ -95,7 +99,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/hckr-news/mnlaodleonmmfkdhfofamacceeikgecp"
                   title="hckr news"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   hckr news
                 </a>{' '}
@@ -106,7 +110,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/honey/bmnlcjabgnpnenekpadlanbbkooimhnj"
                   title="Honey"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Honey
                 </a>{' '}
@@ -116,7 +120,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/imgur-uploader/lcpkicdemehhmkjolekhlglljnkggfcf"
                   title="Imgur Uploader"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Imgur Uploader
                 </a>{' '}
@@ -126,7 +130,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa"
                   title="JSON Formatter"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   JSON Formatter
                 </a>{' '}
@@ -136,7 +140,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/minimal-twitter/pobhoodpcipjmedfenaigbeloiidbflp"
                   title="Minimal Twitter"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Minimal Twitter
                 </a>{' '}
@@ -147,7 +151,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/octolinker/jlmafbaeoofdegohdhinkhilhclaklkp"
                   title="OctoLinker"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   OctoLinker
                 </a>{' '}
@@ -157,7 +161,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://privacy.com/join/229LX"
                   title="Pay by Privacy.com"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Pay by Privacy.com
                 </a>{' '}
@@ -168,7 +172,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi"
                   title="React Developer Tools"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   React Developer Tools
                 </a>{' '}
@@ -178,7 +182,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/reader-mode/llimhhconnjiflfimocjggfjdlmlhblm"
                   title="Reader Mode"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Reader Mode
                 </a>{' '}
@@ -188,7 +192,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/reddit-enhancement-suite/kbmfpngjjgdllneeigpgjifpgocmfgmb"
                   title="Reddit Enhancement Suite"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Reddit Enhancement Suite
                 </a>{' '}
@@ -198,7 +202,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd"
                   title="Redux DevTools"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Redux DevTools
                 </a>{' '}
@@ -208,7 +212,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/smile-always/jgpmhnmjbhgkhpbgelalfpplebgfjmbf"
                   title="Smile Always"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Smile Always
                 </a>{' '}
@@ -218,7 +222,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo"
                   title="Tampermonkey"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Tampermonkey
                 </a>{' '}
@@ -227,13 +231,21 @@ const NowPage: FunctionComponent = () => (
             </ul>
           </li>
           <li className="mb-4">
-            <a href="https://cleanmymac.com/" title="CleanMyMac X" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://cleanmymac.com/"
+              title="CleanMyMac X"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               CleanMyMac X
             </a>{' '}
             - I use CleanMyMac X to keep my macOS clean from clutter.
           </li>
           <li className="mb-4">
-            <a href="https://discordapp.com/" title="Discord" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://discordapp.com/"
+              title="Discord"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Discord
             </a>{' '}
             - Discord allows me to sit in a voice channel with friends and talk while as if we&apos;re in the same
@@ -243,26 +255,38 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://www.docker.com/products/docker-desktop/"
               title="Docker Desktop"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Docker Desktop
             </a>{' '}
             - Self explainatory. For running Docker on macOS.
           </li>
           <li className="mb-4">
-            <a href="https://dropbox.com/" title="Dropbox" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://dropbox.com/"
+              title="Dropbox"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Dropbox
             </a>{' '}
             - Most of my documents are now being synced via iCloud, but some stuff uses Dropbox for settings.
           </li>
           <li className="mb-4">
-            <a href="https://www.figma.com/" title="Figma" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://www.figma.com/"
+              title="Figma"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Figma
             </a>{' '}
             - I recently switched to Figma from Sketch to see what all the hubbub is about.
           </li>
           <li className="mb-4">
-            <a href="https://firefox.com/" title="Firefox" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://firefox.com/"
+              title="Firefox"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Firefox
             </a>{' '}
             - I&apos;m a web developer, need to make sure everything works in Firefox too.
@@ -271,14 +295,18 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://google.com/chrome/"
               title="Googe Chrome"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Googe Chrome
             </a>{' '}
             - Same reason as Firefox even though Brave is Chromium.
           </li>
           <li className="mb-4">
-            <a href="https://www.apple.com/macos/" title="Mail" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://www.apple.com/macos/"
+              title="Mail"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Mail
             </a>{' '}
             - I use the default Mail.app in macOS / iOS as it works for what I need.
@@ -287,7 +315,7 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://www.microsoftedgeinsider.com/"
               title="Microsoft Edge (Dev)"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Microsoft Edge (Dev)
             </a>{' '}
@@ -298,27 +326,39 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://lightpillar.com/mosaic.html"
               title="Mosaic"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Mosaic
             </a>{' '}
             - This software is glorious. I use it to tile my windows how I want them. I highly suggest you use this too.
           </li>
           <li className="mb-4">
-            <a href="https://www.apple.com/music/" title="Music" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://www.apple.com/music/"
+              title="Music"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Music
             </a>{' '}
             - Apple Music and Spotify are basically on par for musical selection. I choose Apple Music because I already
             have it on all my devices, and Verizon gave me a free lifetime subscription.
           </li>
           <li className="mb-4">
-            <a href="https://www.apple.com/macos/" title="Notes" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://www.apple.com/macos/"
+              title="Notes"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Notes
             </a>{' '}
             - I use the default notes app to keep track of any notes I may need to take.
           </li>
           <li className="mb-4">
-            <a href="https://www.apple.com/macos/" title="Photos" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://www.apple.com/macos/"
+              title="Photos"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Photos
             </a>{' '}
             - All my photos from my iPhone sync to iCloud so I can view them and share them with my family.
@@ -327,7 +367,7 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://www.apple.com/macos/"
               title="Podcasts"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Podcasts
             </a>{' '}
@@ -337,7 +377,7 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://github.com/avibrazil/RDM/"
               title="RDM"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               RDM
             </a>{' '}
@@ -348,7 +388,7 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://www.apple.com/macos/"
               title="Reminders"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Reminders
             </a>{' '}
@@ -356,26 +396,38 @@ const NowPage: FunctionComponent = () => (
             with other todo apps.
           </li>
           <li className="mb-4">
-            <a href="https://www.apple.com/safari/" title="Safari" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://www.apple.com/safari/"
+              title="Safari"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Safari
             </a>{' '}
             - Testing of websites but also to take beautiful screenshots of them with the browser wrapping it.
           </li>
           <li className="mb-4">
-            <a href="https://slack.com/" title="Slack" className="border-b-2 border-brand hover:text-brand">
+            <a href="https://slack.com/" title="Slack" className="border-b-2 border-joshmanders hover:text-joshmanders">
               Slack
             </a>{' '}
             - Majority of my community communication comes from Slack teams.
           </li>
           <li className="mb-4">
-            <a href="https://cordlessdog.com/stay/" title="Stay" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://cordlessdog.com/stay/"
+              title="Stay"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Stay
             </a>{' '}
             - Use in conjunction with Mosaic to keep my windows tiled how I want them depending on what configuration I
             have set for the displays connected.
           </li>
           <li className="mb-4">
-            <a href="https://symless.com/synergy/" title="Synergy" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://symless.com/synergy/"
+              title="Synergy"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Synergy
             </a>{' '}
             - I have my mid 2015 MacBook Pro clamshelled and tucked away with two displays hooked up as my main
@@ -383,17 +435,29 @@ const NowPage: FunctionComponent = () => (
             &amp; mouse between them.
           </li>
           <li className="mb-4">
-            <a href="https://tableplus.com/" title="TablePlus" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://tableplus.com/"
+              title="TablePlus"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               TablePlus
             </a>{' '}
             - To handle all my administrational needs for databases such as MySQL, PostgreSQL and Redis.
           </li>
           <li className="mb-4">
-            <a href="https://telegram.org/" title="Telegram" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://telegram.org/"
+              title="Telegram"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Telegram
             </a>{' '}
             - Used for real-time chat with the one and only{' '}
-            <a href="https://getmakerlog.com" title="Makerlog" className="border-b-2 border-brand hover:text-brand">
+            <a
+              href="https://getmakerlog.com"
+              title="Makerlog"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
               Makerlog
             </a>{' '}
             community.
@@ -403,7 +467,7 @@ const NowPage: FunctionComponent = () => (
               <a
                 href="https://www.apple.com/macos/"
                 title="Terminal"
-                className="border-b-2 border-brand hover:text-brand"
+                className="border-b-2 border-joshmanders hover:text-joshmanders"
               >
                 Terminal
               </a>{' '}
@@ -416,14 +480,18 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://fishshell.com/"
                   title="Fish Shell"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Fish Shell
                 </a>{' '}
                 - Recently switched from ZSH to Fish as it has more out of the box and looks really nice.
               </li>
               <li className="my-2 ml-2">
-                <a href="https://git-scm.com/" title="Git" className="border-b-2 border-brand hover:text-brand">
+                <a
+                  href="https://git-scm.com/"
+                  title="Git"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
+                >
                   Git
                 </a>{' '}
                 - Git is the only version control I need in my life.
@@ -432,14 +500,18 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://stedolan.github.io/jq/"
                   title="jq"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   jq
                 </a>{' '}
                 - I use this to slice and dice JSON.
               </li>
               <li className="my-2 ml-2">
-                <a href="https://brew.sh/" title="Homebrew" className="border-b-2 border-brand hover:text-brand">
+                <a
+                  href="https://brew.sh/"
+                  title="Homebrew"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
+                >
                   Homebrew
                 </a>{' '}
                 - How all applications be it GUI or command line based get installed.
@@ -448,7 +520,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://github.com/Homebrew/homebrew-cask/"
                   title="Homebrew Cask"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   Homebrew Cask
                 </a>{' '}
@@ -456,7 +528,11 @@ const NowPage: FunctionComponent = () => (
                 Cask.
               </li>
               <li className="my-2 ml-2">
-                <a href="https://httpie.org/" title="Httpie" className="border-b-2 border-brand hover:text-brand">
+                <a
+                  href="https://httpie.org/"
+                  title="Httpie"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
+                >
                   Httpie
                 </a>{' '}
                 - Just easier to make &quot;curl&quot; requests with Httpie.
@@ -465,7 +541,7 @@ const NowPage: FunctionComponent = () => (
                 <a
                   href="https://github.com/mas-cli/mas/"
                   title="MAS"
-                  className="border-b-2 border-brand hover:text-brand"
+                  className="border-b-2 border-joshmanders hover:text-joshmanders"
                 >
                   MAS
                 </a>{' '}
@@ -477,7 +553,7 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://www.codeux.com/textual/"
               title="Textual"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Textual
             </a>{' '}
@@ -487,7 +563,7 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://www.virtualbox.org/"
               title="VirtualBox"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               VirtualBox
             </a>{' '}
@@ -497,14 +573,14 @@ const NowPage: FunctionComponent = () => (
             <a
               href="https://code.visualstudio.com/"
               title="Visual Studio Code"
-              className="border-b-2 border-brand hover:text-brand"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Visual Studio Code
             </a>{' '}
             - My absolutely favorite and probably never going to be topped code editor.
           </li>
           <li className="mb-4">
-            <a href="https://zoom.us/" title="Zoom" className="border-b-2 border-brand hover:text-brand">
+            <a href="https://zoom.us/" title="Zoom" className="border-b-2 border-joshmanders hover:text-joshmanders">
               Zoom
             </a>{' '}
             - Use to meet with clients.

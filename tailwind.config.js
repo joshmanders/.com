@@ -1,10 +1,12 @@
+/* eslint-disable */
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 const joshTheme = {
   colors: {
-    brand: '#25ae60',
-    appmetrics: defaultTheme.colors.purple[700],
+    joshmanders: '#25ae60',
     niftyco: defaultTheme.colors.teal[700],
+    audience: '#FF3666',
+    appmetrics: defaultTheme.colors.purple[700],
     merched: defaultTheme.colors.blue[700],
     twitter: '#1da1f2',
   },
@@ -51,9 +53,9 @@ module.exports = {
       },
       a: {
         fontWeight: defaultTheme.fontWeight['medium'],
-        borderBottom: `solid 2px ${joshTheme.colors.brand}`,
+        borderBottom: `solid 2px ${joshTheme.colors.joshmanders}`,
         'a:hover': {
-          color: joshTheme.colors.brand,
+          color: joshTheme.colors.joshmanders,
         },
       },
       'a[href^="https://appmetrics.co"]': {

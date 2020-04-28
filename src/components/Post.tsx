@@ -103,7 +103,7 @@ const Post: FunctionComponent<PostProps> = ({
             {previous && (
               <Link
                 to={previous.fields.slug}
-                className="text-sm border-b-2 border-brand hover:text-brand md:text-lg"
+                className="text-sm border-b-2 border-joshmanders hover:text-joshmanders md:text-lg"
                 title={`Previous: ${previous.frontmatter.title}`}
               >
                 ← {previous.frontmatter.title}
@@ -114,7 +114,7 @@ const Post: FunctionComponent<PostProps> = ({
             {next && (
               <Link
                 to={next.fields.slug}
-                className="text-sm border-b-2 border-brand hover:text-brand md:text-lg"
+                className="text-sm border-b-2 border-joshmanders hover:text-joshmanders md:text-lg"
                 title={`Next: ${next.frontmatter.title}`}
               >
                 {next.frontmatter.title} →
