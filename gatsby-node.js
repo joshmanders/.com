@@ -9,7 +9,7 @@ exports.createPages = ({ graphql, actions }) => {
     resolve(
       graphql(`
         query GetBlogPosts {
-          posts: allMarkdownRemark(sort: { fields: [fields___slug], order: DESC }) {
+          posts: allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
             edges {
               node {
                 fields {

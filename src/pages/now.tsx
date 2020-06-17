@@ -1,19 +1,13 @@
 import React, { FunctionComponent, Fragment } from 'react';
-import { Shell, LargeBio } from '../components';
+import { Page, LargeBio } from '../components';
 import { Link } from 'gatsby';
-import Helmet from 'react-helmet';
 
-const NowPage: FunctionComponent = () => (
+const Now: FunctionComponent = () => (
   <Fragment>
-    <Helmet>
-      <title>What have I been up to lately?</title>
-    </Helmet>
-    <Shell
-      meta={{
-        title: 'What have I been up to lately?',
-        description: 'What I am focused on at this point in my life.',
-        slug: 'now',
-      }}
+    <Page
+      title="What have I been up to lately?"
+      description="What I am focused on at this point in my life."
+      slug="now"
     >
       <h1 className="mb-8 text-2xl font-semibold md:text-5xl">
         <Link to="/" title="Go back">
@@ -23,7 +17,7 @@ const NowPage: FunctionComponent = () => (
       <LargeBio />
       <section>
         <div className="mb-4 text-sm">
-          Last updated April 28th, 2020. <br className="md:hidden" />(
+          Last updated June 17th, 2020. <br className="md:hidden" />(
           <a
             href="http://nownownow.com/about"
             title="What is a Now page?"
@@ -43,39 +37,42 @@ const NowPage: FunctionComponent = () => (
             </a>
             .
           </li>
+        </ul>
+        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What am I watching?</h3>
+        <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">
-            Started building{' '}
             <a
-              href="https://github.com/aniftyco/audience"
-              title="Connect with your Audience"
-              className="border-b-2 border-audience hover:text-audience"
+              href="https://www.imdb.com/title/tt7604970/"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
-              Audience
+              Brooklyn Nine-Nine
             </a>{' '}
-            a mailing list management service.
+            on <span className="italics">NBC</span>
           </li>
-          <li className="mb-4 line-through">
-            Started building the first SaaS product for NiftyCo called{' '}
+          <li className="mb-4">
             <a
-              href="https://appmetrics.co"
-              title="App Metrics - Application Performance Monitoring"
-              className="border-b-2 border-appmetrics hover:text-appmetrics"
+              href="https://www.imdb.com/title/tt8064302/"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
-              App Metrics
-            </a>
-            , an application performance monitoring platform built on Google&apos;s Lighthouse.
+              Dead to Me
+            </a>{' '}
+            on <span className="italics">Netflix</span>
+          </li>
+          <li className="mb-4">
+            <a
+              href="https://www.imdb.com/title/tt5834204/"
+              className="border-b-2 border-joshmanders hover:text-joshmanders"
+            >
+              The Handmaid&apos;s Tale
+            </a>{' '}
+            on <span className="italics">Hulu</span>
           </li>
         </ul>
-        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What do I want to do?</h3>
-        <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
-          <li className="mb-4">I hope to start streaming working on stuff on Twitch/YouTube.</li>
-          <li className="mb-4">Write a course on converting a REST application to GraphQL.</li>
-        </ul>
-        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What books am I reading?</h3>
+        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What am I reading?</h3>
         <ul className="mb-12 leading-relaxed list-disc list-inside md:text-xl md:mb-20">
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/0307465357/ref=as_li_qf_asin_il_tl?ie=UTF8&tag=joshmanders-20&creative=9325&linkCode=as2&creativeASIN=0307465357&linkId=891d1b4f5857063b301cb0717af021eb"
+              href="https://www.amazon.com/gp/product/0307465357/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               The 4-Hour-Work-Week
@@ -84,7 +81,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/1492180742/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=1492180742&linkCode=as2&tag=joshmanders-20&linkId=929899b497fdf76d78fe2922cf183e4d"
+              href="https://www.amazon.com/gp/product/1492180742/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               The Mom Test - How to talk to customers
@@ -93,19 +90,16 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/B003YH9MMI/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=B003YH9MMI&linkId=dc0b2049b95053f8ee3dc993d1bbcc10"
+              href="https://www.amazon.com/gp/product/B003YH9MMI/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Start Small, Stay Small
             </a>{' '}
             by <span className="italic">Rob Walling</span>
           </li>
-        </ul>
-        <h3 className="mb-4 text-xl font-semibold md:text-3xl">What books do I have left to read?</h3>
-        <ul className="leading-relaxed list-disc list-inside md:text-xl">
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/0143126563/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0143126563&linkId=327ccff351cc6e87a562ed1a2151d88f"
+              href="https://www.amazon.com/gp/product/0143126563/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Getting Things Done
@@ -114,7 +108,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/014310960X/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=014310960X&linkCode=as2&tag=joshmanders-20&linkId=5d3ac67f23b49c148cfe8bd5c463e616"
+              href="https://www.amazon.com/gp/product/014310960X/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Small Giants
@@ -123,7 +117,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/1544502583/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1544502583&linkId=76062d19a7552d4e152d50d84e106b2b"
+              href="https://www.amazon.com/gp/product/1544502583/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Stand For Something
@@ -132,7 +126,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/1328972356/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=1328972356&linkId=027632e5edeaf4ae0f3383c9a6be1958"
+              href="https://www.amazon.com/gp/product/1328972356/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Company of One
@@ -141,7 +135,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/0578012812/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0578012812&linkId=ce426d3db8de27b8e9cdc86cedd16714"
+              href="https://www.amazon.com/gp/product/0578012812/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Getting Real
@@ -150,7 +144,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/0062874780/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0062874780&linkId=661e680d2db719dbc01c5faa89d9dbd2"
+              href="https://www.amazon.com/gp/product/0062874780/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               It Doesn&apos;t Have To Be Crazy At Work
@@ -159,7 +153,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/0804137501/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0804137501&linkId=3c32ce7ff2bb087720f0bca5351eb752"
+              href="https://www.amazon.com/gp/product/0804137501/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Remote
@@ -168,7 +162,7 @@ const NowPage: FunctionComponent = () => (
           </li>
           <li className="mb-4">
             <a
-              href="https://www.amazon.com/gp/product/0307463745/ref=as_li_tl?ie=UTF8&tag=joshmanders-20&camp=1789&creative=9325&linkCode=as2&creativeASIN=0307463745&linkId=d16621045e51bea7675a595db65cf8f4"
+              href="https://www.amazon.com/gp/product/0307463745/"
               className="border-b-2 border-joshmanders hover:text-joshmanders"
             >
               Rework
@@ -177,8 +171,8 @@ const NowPage: FunctionComponent = () => (
           </li>
         </ul>
       </section>
-    </Shell>
+    </Page>
   </Fragment>
 );
 
-export default NowPage;
+export default Now;

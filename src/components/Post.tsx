@@ -1,8 +1,7 @@
 import { format } from 'date-fns';
 import { graphql, Link } from 'gatsby';
 import React, { FunctionComponent, Fragment } from 'react';
-import Helmet from 'react-helmet';
-import { Shell } from './Shell';
+import { Page } from './Page';
 import { CompactBio as Bio } from './Bio';
 
 export const pageQuery = graphql`
@@ -25,7 +24,7 @@ export const pageQuery = graphql`
   }
 `;
 
-interface PostProps {
+type PostProps = {
   data: {
     post: {
       fields: {
@@ -61,7 +60,7 @@ interface PostProps {
       };
     };
   };
-}
+};
 
 const Post: FunctionComponent<PostProps> = ({
   data: {
@@ -77,10 +76,7 @@ const Post: FunctionComponent<PostProps> = ({
 }) => {
   return (
     <Fragment>
-      <Helmet>
-        <title>{title}</title>
-      </Helmet>
-      <Shell meta={{ title, description, slug }}>
+      <Page title={title} description={description} slug={slug}>
         <h3 className="mb-4 text-lg font-semibold md:text-2xl">
           <Link to="/" title="Thoughts, Stories &amp; Ideas">
             Thoughts, Stories &amp; Ideas
@@ -122,7 +118,7 @@ const Post: FunctionComponent<PostProps> = ({
             )}
           </li>
         </ul>
-      </Shell>
+      </Page>
     </Fragment>
   );
 };

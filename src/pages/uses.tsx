@@ -1,20 +1,10 @@
 import React, { FunctionComponent, Fragment } from 'react';
-import { Shell, LargeBio } from '../components';
+import { Page, LargeBio } from '../components';
 import { Link } from 'gatsby';
-import Helmet from 'react-helmet';
 
-const NowPage: FunctionComponent = () => (
+const Uses: FunctionComponent = () => (
   <Fragment>
-    <Helmet>
-      <title>My Setup</title>
-    </Helmet>
-    <Shell
-      meta={{
-        title: 'My Setup',
-        description: 'The tools that get me through my days.',
-        slug: 'uses',
-      }}
-    >
+    <Page title="My Setup" description="The tools that get me through my days." slug="uses">
       <h1 className="mb-8 text-2xl font-semibold md:text-5xl">
         <Link to="/" title="Go back">
           Thoughts, Stories &amp; Ideas
@@ -587,8 +577,8 @@ const NowPage: FunctionComponent = () => (
           </li>
         </ul>
       </section>
-    </Shell>
+    </Page>
   </Fragment>
 );
 
-export default NowPage;
+export default Uses;

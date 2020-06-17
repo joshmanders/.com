@@ -1,6 +1,6 @@
 import { graphql, Link, useStaticQuery } from 'gatsby';
 import React, { FunctionComponent } from 'react';
-import { Shell, LargeBio } from '../components';
+import { Page, LargeBio } from '../components';
 
 const GET_POSTS_QUERY = graphql`
   query IndexQuery {
@@ -20,7 +20,7 @@ const GET_POSTS_QUERY = graphql`
   }
 `;
 
-interface EdgeNode {
+type EdgeNode = {
   node: {
     fields: {
       slug: string;
@@ -30,19 +30,19 @@ interface EdgeNode {
       description: string;
     };
   };
-}
+};
 
-interface PostsResult {
+type PostsResult = {
   posts: {
     edges: EdgeNode[];
   };
-}
+};
 
-const IndexPage: FunctionComponent = () => {
+const Index: FunctionComponent = () => {
   const { posts } = useStaticQuery<PostsResult>(GET_POSTS_QUERY);
 
   return (
-    <Shell>
+    <Page>
       <h1 className="mb-8 text-2xl font-semibold md:text-5xl">Thoughts, Stories &amp; Ideas</h1>
       <LargeBio />
       <section>
@@ -64,8 +64,8 @@ const IndexPage: FunctionComponent = () => {
           );
         })}
       </section>
-    </Shell>
+    </Page>
   );
 };
 
-export default IndexPage;
+export default Index;

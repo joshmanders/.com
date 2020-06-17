@@ -38,15 +38,7 @@ export const LargeBio: FunctionComponent = () => (
     <div className="flex-1 leading-relaxed md:text-lg">
       <p className="text-2xl">Hi, I&apos;m Josh 👋</p>
       <p>
-        I am building{' '}
-        <a
-          href="https://startaudience.com"
-          title="Connect with your Audience"
-          className="border-b-2 border-audience hover:text-audience"
-        >
-          Audience
-        </a>
-        , a mailing list management service. You can find me on{' '}
+        I build simple solutions to complex problems. You can find me on{' '}
         <a
           href="https://twitter.com/joshmanders"
           title="Me on Twitter"

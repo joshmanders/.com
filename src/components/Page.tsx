@@ -3,19 +3,18 @@ import Helmet from 'react-helmet';
 import 'tailwindcss/tailwind.css';
 import 'typeface-noto-serif';
 
-interface MetaProps {
-  title: string;
-  description: string;
-  slug: string;
-}
-interface ShellProps {
-  meta?: MetaProps;
+type PageProps = {
+  title?: string;
+  description?: string;
+  slug?: string;
   children: JSX.Element | JSX.Element[];
-}
+};
 
-export const Shell: FunctionComponent<ShellProps> = ({
+export const Page: FunctionComponent<PageProps> = ({
+  title,
+  description = 'From the mind of Josh Manders',
+  slug = '/',
   children,
-  meta: { title = 'Thoughts, Stories & Ideas', description = 'From the mind of Josh Manders', slug = '/' } = {},
 }) => {
   return (
     <Fragment>
@@ -29,6 +28,7 @@ export const Shell: FunctionComponent<ShellProps> = ({
           prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#"
           lang="en"
         />
+        <title>{title}</title>
         <meta name="description" content={description} />
         <link rel="icon" href="https://github.com/joshmanders.png" />
         <meta itemProp="name" content={title} />
