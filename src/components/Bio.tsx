@@ -9,11 +9,11 @@ export const CompactBio: FunctionComponent = () => (
     <div className="flex-1 leading-relaxed md:text-lg">
       Written by <strong>Josh Manders</strong> who is building{' '}
       <a
-        href="https://startaudience.com"
-        title="Connect with your Audience"
+        href="https://twitter.com/primcloudhq"
+        title="A Heroku Altertive"
         className="border-b-2 border-audience hover:text-audience"
       >
-        Audience
+      PrismCloud
       </a>{' '}
       at his company{' '}
       <a href="https://aniftyco.com" title="NiftyCo" className="border-b-2 border-niftyco hover:text-niftyco">
