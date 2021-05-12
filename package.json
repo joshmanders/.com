@@ -4,11 +4,8 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "build": "gulp build",
-    "zip": "gulp zip",
-    "test": "gscan .",
-    "test:ci": "gscan --fatal --verbose .",
-    "pretest": "gulp build"
+    "build": "rimraf joshmanders.zip && gulp build",
+    "ghost:install": "ghost install local"
   },
   "prettier": {
     "printWidth": 120,
@@ -31,6 +28,7 @@
     "postcss-nested": "^5.0.5",
     "prettier": "^2.3.0",
     "pump": "^3.0.0",
+    "rimraf": "^2.4.5",
     "tailwindcss": "^2.1.2"
   }
 }

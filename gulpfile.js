@@ -77,9 +77,9 @@ function zipper(done) {
 const cssWatcher = () => watch(['tailwind.config.js', 'content/themes/joshmanders/tailwind.css'], css);
 const hbsWatcher = () => watch(['content/themes/joshmanders/*.hbs', 'content/themes/joshmanders/**/**/*.hbs'], hbs);
 const watcher = parallel(cssWatcher, hbsWatcher);
-const build = series(css, js);
-const dev = series(build, serve, watcher);
+const compile = series(css, js);
+const dev = series(compile, serve, watcher);
 
-exports.build = build;
-exports.zip = series(build, zipper);
+exports.compile = compile;
+exports.build = series(compile, zipper);
 exports.default = dev;
