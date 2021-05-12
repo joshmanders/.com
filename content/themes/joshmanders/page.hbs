@@ -1,0 +1,21 @@
+{{!< default}}
+
+    <header>
+        <h1 class="mb-8 text-2xl font-semibold md:text-5xl">
+            <a href="/" title="{{@site.title}}">{{@site.title}}</a>
+        </h1>
+    </header>
+    <section>
+        {{> bio}}
+    </section>
+    <main>
+{{#post}}
+        <h3 class="mb-4 text-xl font-semibold md:text-3xl">{{title}}</h3>
+        <p class="mb-6 text-xl">
+            {{excerpt}}
+        </p>
+        <article class="max-w-full mt-6 prose md:mt-8 lg:prose-xl dark:text-white">
+            {{content}}
+        </article>
+{{/post}}
+    </main>
