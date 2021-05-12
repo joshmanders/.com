@@ -61,15 +61,14 @@ function js(done) {
 }
 
 function zipper(done) {
-  var targetDir = 'dist/';
-  var themeName = require('./package.json').name;
+  var themeName = require('./content/themes/joshmanders/package.json').name;
   var filename = themeName + '.zip';
 
   pump(
     [
       src(['content/themes/joshmanders/**', '!content/themes/joshmanders/dist', '!content/themes/joshmanders/dist/**']),
       zip(filename),
-      dest(targetDir),
+      dest('./'),
     ],
     handleError(done)
   );
