@@ -9,6 +9,15 @@
 }
 
 @layer components {
+  .post-tags {
+    .tag::after {
+      content: ', ';
+    }
+    .tag:last-child::after {
+      content: '';
+    }
+  }
+
   .prose {
     a {
       &:link,
