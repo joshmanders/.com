@@ -3,7 +3,9 @@
     <header>
         <h1 class="mb-8 text-2xl font-semibold md:text-5xl">{{@site.title}}</h1>
     </header>
-
+    <section>
+        {{> bio}}
+    </section>
     <main>
         <h3 class="mb-4 text-xl font-semibold md:text-3xl">Latest Writings</h3>
         {{#foreach posts visibility="all"}}
