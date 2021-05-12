@@ -1,0 +1,51 @@
+{
+  "name": "joshmanders",
+  "description": "The Tailwind CSS based theme for joshmanders.com",
+  "version": "13.0.0",
+  "author": {
+    "name": "Josh Manders",
+    "email": "josh@joshmanders.com",
+    "url": "https://twitter.com/joshmanders"
+  },
+  "engines": {
+    "ghost": ">=4.0.0",
+    "ghost-api": "v4"
+  },
+  "license": "MIT",
+  "screenshots": {
+    "desktop": "assets/screenshot-desktop.jpg",
+    "mobile": "assets/screenshot-mobile.jpg"
+  },
+  "gpm": {
+    "type": "theme",
+    "categories": [
+      "Minimal",
+      "Personal Blogs"
+    ]
+  },
+  "keywords": [
+    "ghost-theme",
+    "ghost",
+    "theme"
+  ],
+  "config": {
+    "posts_per_page": 20,
+    "image_sizes": {
+      "s": {
+        "width": 320
+      },
+      "m": {
+        "width": 640
+      },
+      "l": {
+        "width": 960
+      },
+      "xl": {
+        "width": 1920
+      }
+    }
+  },
+  "browserslist": [
+    "defaults"
+  ]
+}

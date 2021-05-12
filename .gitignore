@@ -1,0 +1,16 @@
+content/apps/
+content/data/
+content/images/
+content/logs/
+content/settings/
+content/themes/casper/
+content/themes/joshmanders/assets/*.js
+content/themes/joshmanders/assets/*.js.map
+content/themes/joshmanders/assets/*.css
+content/themes/joshmanders/assets/*.css.map
+current
+node_modules/
+versions/
+.ghost-cli
+.ghostpid
+config.development.json

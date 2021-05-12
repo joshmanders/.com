@@ -1,0 +1,29 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply h-screen border-t-8 border-accent;
+  }
+}
+
+@layer components {
+  .prose {
+    a {
+      &:link,
+      &:active,
+      &:visited {
+        @apply text-accent no-underline;
+      }
+
+      &:hover {
+        @apply underline;
+      }
+    }
+
+    blockquote {
+      border-left-color: theme('colors.accent.DEFAULT');
+    }
+  }
+}

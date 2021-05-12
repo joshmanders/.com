@@ -1,0 +1,19 @@
+{{!< default}}
+
+    <header>
+        <h1 class="mb-8 text-2xl font-semibold md:text-5xl">{{@site.title}}</h1>
+    </header>
+
+    <main>
+        <h3 class="mb-4 text-xl font-semibold md:text-3xl">Latest Writings</h3>
+        {{#foreach posts visibility="all"}}
+        <article class="mb-8">
+            <h2 class="mb-2 text-xl md:text-2xl">
+                <a href="{{url}}" class="text-accent no-underline hover:underline">{{title}}</a>
+                <p class="italic md:text-lg">{{excerpt}}</p>
+            </h2>
+        </article>
+        {{/foreach}}
+
+        {{pagination}}
+    </main>
