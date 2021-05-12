@@ -23,7 +23,7 @@
       &:link,
       &:active,
       &:visited {
-        @apply text-accent no-underline;
+        @apply no-underline text-accent;
       }
 
       &:hover {
