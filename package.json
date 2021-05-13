@@ -11,6 +11,9 @@
     "printWidth": 120,
     "singleQuote": true
   },
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^10.2.5",
