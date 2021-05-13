@@ -14,7 +14,7 @@
                 </a></li>
             {{/primary_author}}
             <li class="italic">{{date format="MMMM DD, YYYY"}}</li>
-            <li class="hidden italic lg:block">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</li>
+            <li class="italic">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</li>
             {{#if tags}}
             <li class="italic post-tags">
                 {{#foreach tags}}
@@ -24,7 +24,7 @@
             </li>
             {{/if}}
         </ul>
-        <article class="max-w-full mt-6 prose md:mt-8 lg:prose-xl dark:text-white">
+        <article class="max-w-full mt-6 prose md:mt-8 lg:prose-lg dark:text-white">
             {{content}}
         </article>
         {{> subscribe}}

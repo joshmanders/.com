@@ -12,7 +12,7 @@
   .post-meta {
     li:not(:last-child)::after {
       content: '/';
-      @apply text-gray-500 pl-2 pr-1;
+      @apply pl-2 pr-1 text-gray-500;
     }
   }
 
