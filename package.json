@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "gulp",
-    "build": "rimraf joshmanders.zip && gulp build",
+    "build": "rimraf joshmanders.zip && NODE_ENV=production gulp build",
     "ghost:install": "ghost install local"
   },
   "prettier": {
