@@ -2,7 +2,10 @@ const defaultTheme = require('tailwindcss/defaultTheme');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: ['content/themes/joshmanders/**/*.hbs'],
+  purge: {
+    layers: ['utilities'],
+    content: ['content/themes/joshmanders/**/*.hbs'],
+  },
   darkMode: 'class',
   theme: {
     extend: {
