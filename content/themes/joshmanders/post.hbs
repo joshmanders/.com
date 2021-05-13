@@ -1,4 +1,7 @@
-{{!< default}} {{#post}} <header>
+{{!< default}} 
+
+{{#post}}
+<header>
     <h3 class="mb-4 text-lg font-semibold md:mb-6 md:text-2xl">
         <a href="/" title="{{@site.title}}">{{@site.title}}</a>
     </h3>
@@ -28,7 +31,6 @@
             {{content}}
         </article>
         {{> subscribe}}
-        </div>
         <ul class="flex flex-col mb-4 md:mb-6 md:flex-row md:flex-wrap">
             {{#next_post}}
             <li class="flex-1 mb-2 md:mb-0">
@@ -70,5 +72,4 @@
             {{/prev_post}}
         </ul>
     </main>
-
-    {{/post}}
+{{/post}}

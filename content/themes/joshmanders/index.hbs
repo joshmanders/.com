@@ -1,29 +1,30 @@
-{{!< default}} <header>
-    <h1 class="mb-8 text-2xl font-semibold md:text-5xl">
-        {{#if tag}}
-        <a href="/" title="{{@site.title}}">{{@site.title}}</a>
-        {{else}}
-        {{@site.title}}
-        {{/if}}
-    </h1>
-    </header>
-    <section>
-        {{> bio}}
-    </section>
-    <main>
-        {{#if tag}}
-        <h3 class="mb-4 text-xl font-semibold md:text-3xl">Latest Writings About {{tag.name}}</h3>
-        {{else}}
-        <h3 class="mb-4 text-xl font-semibold md:text-3xl">Latest Writings</h3>
-        {{/if}}
-        {{#foreach posts visibility="all"}}
-        <article class="mb-8">
-            <h2 class="mb-2 text-xl md:text-2xl">
-                <a href="{{url}}" class="no-underline text-accent hover:underline">{{title}}</a>
-                <p class="italic md:text-lg">{{excerpt}}</p>
-            </h2>
-        </article>
-        {{/foreach}}
+{{!< default}}
+<header>
+  <h1 class='mb-8 text-2xl font-semibold md:text-5xl'>
+    {{#if tag}}
+      <a href='/' title='{{@site.title}}'>{{@site.title}}</a>
+    {{else}}
+      {{@site.title}}
+    {{/if}}
+  </h1>
+</header>
+<section>
+    {{> bio}}
+</section>
+<main>
+  {{#if tag}}
+    <h3 class='mb-4 text-xl font-semibold md:text-3xl'>Latest Writings About {{tag.name}}</h3>
+  {{else}}
+    <h3 class='mb-4 text-xl font-semibold md:text-3xl'>Latest Writings</h3>
+  {{/if}}
+  {{#foreach posts visibility='all'}}
+    <article class='mb-8'>
+      <h2 class='mb-2 text-xl md:text-2xl'>
+        <a href='{{url}}' class='no-underline text-accent hover:underline'>{{title}}</a>
+        <p class='italic md:text-lg'>{{excerpt}}</p>
+      </h2>
+    </article>
+  {{/foreach}}
 
-        {{pagination}}
-    </main>
+  {{pagination}}
+</main>

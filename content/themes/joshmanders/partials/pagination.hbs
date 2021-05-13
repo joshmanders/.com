@@ -1,22 +1,28 @@
-<nav class="flex items-center justify-between mt-12">
-    {{#if prev}}
-    <a href="{{page_url prev}}" class="font-semibold hover:text-accent">
-        <span aria-hidden="true" class="font-sans text-gray-500">&larr;</span> Newer Posts
+<nav class='flex items-center justify-between mt-12'>
+  {{#if prev}}
+    <a href='{{page_url prev}}' class='font-semibold hover:text-accent'>
+      <span aria-hidden='true' class='font-sans text-gray-500'>&larr;</span>
+      Newer Posts
     </a>
-    {{else}}
-    <div class="text-gray-700">
-        <span aria-hidden="true" class="font-sans text-gray-500">&larr;</span> Newer Posts
+  {{else}}
+    <div class='text-gray-700'>
+      <span aria-hidden='true' class='font-sans text-gray-500'>&larr;</span>
+      Newer Posts
     </div>
-    {{/if}}
-    <span class="px-4 py-2 font-medium text-gray-500 border border-gray-300 rounded-full">Page {{page}} of
-        {{pages}}</span>
-    {{#if next}}
-    <a href="{{page_url next}}" class="font-semibold hover:text-accent">
-        Older Posts <span aria-hidden="true" class="font-sans text-gray-500">&rarr;</span>
+  {{/if}}
+  <span class='px-4 py-2 font-medium text-gray-500 border border-gray-300 rounded-full'>Page
+    {{page}}
+    of
+    {{pages}}</span>
+  {{#if next}}
+    <a href='{{page_url next}}' class='font-semibold hover:text-accent'>
+      Older Posts
+      <span aria-hidden='true' class='font-sans text-gray-500'>&rarr;</span>
     </a>
-    {{else}}
-    <div class="text-gray-700">
-        Older Posts <span aria-hidden="true" class="font-sans text-gray-500">&rarr;</span>
+  {{else}}
+    <div class='text-gray-700'>
+      Older Posts
+      <span aria-hidden='true' class='font-sans text-gray-500'>&rarr;</span>
     </div>
-    {{/if}}
+  {{/if}}
 </nav>
