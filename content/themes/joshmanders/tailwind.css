@@ -35,4 +35,37 @@
       border-left-color: theme('colors.accent.DEFAULT');
     }
   }
+
+  form[data-members-form='subscribe'] {
+    button[type='submit'] > svg {
+      @apply hidden;
+    }
+
+    #subscribe-success,
+    #subscribe-error {
+      @apply hidden;
+    }
+
+    &.loading {
+      button[type='submit'] > svg {
+        @apply inline-block;
+      }
+
+      button[type='submit'] > span {
+        @apply hidden;
+      }
+    }
+
+    &.success {
+      #subscribe-success {
+        @apply block pt-4;
+      }
+    }
+
+    &.error {
+      #subscribe-error {
+        @apply block pt-4;
+      }
+    }
+  }
 }

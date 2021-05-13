@@ -5,15 +5,37 @@
             Be the first to know when I post my thoughts, stories &amp; ideas about code, software, startups and other
             interesting things.
         </p>
-        <form data-members-form="subscribe" class="sm:flex">
-            <input aria-label="Email address" type="email" data-members-email="" required="true"
-                class="w-full px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-600 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none dark:placeholder-gray-800 dark:text-black dark:bg-gray-400 focus:outline-none focus:placeholder-gray-500"
-                placeholder="Enter your email" />
-            <div class="mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
-                <button type="submit"
-                    class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out border border-transparent rounded-md bg-accent hover:bg-opacity-75 focus:outline-none">
-                    Subscribe
-                </button>
+        <form data-members-form="subscribe" class="">
+            <div class="sm:flex">
+                <input aria-label="Email address" type="email" data-members-email="" required="true"
+                    class="w-5/6 px-5 py-3 text-base leading-6 text-gray-900 placeholder-gray-600 transition duration-150 ease-in-out bg-white border border-transparent rounded-md appearance-none dark:placeholder-gray-800 dark:text-black dark:bg-gray-400 focus:outline-none focus:placeholder-gray-500"
+                    placeholder="Enter your email" autocomplete="email" />
+                <div class="w-1/6 mt-3 rounded-md shadow sm:mt-0 sm:ml-3 sm:flex-shrink-0">
+                    <button type="submit"
+                        class="flex items-center justify-center w-full px-5 py-3 text-base font-medium leading-6 text-white transition duration-150 ease-in-out border border-transparent rounded-md bg-accent hover:bg-opacity-75 focus:outline-none">
+                        <span class="py-1">Subscribe</span>
+                        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                            x="0px" y="0px" class="w-8 h-8" viewBox="0 0 40 40" enable-background="new 0 0 40 40"
+                            xml:space="preserve">
+                            <path opacity="0.2" class="fill-current" d="M20.201,5.169c-8.254,0-14.946,6.692-14.946,14.946c0,8.255,6.692,14.946,14.946,14.946
+s14.946-6.691,14.946-14.946C35.146,11.861,28.455,5.169,20.201,5.169z M20.201,31.749c-6.425,0-11.634-5.208-11.634-11.634
+c0-6.425,5.209-11.634,11.634-11.634c6.425,0,11.633,5.209,11.633,11.634C31.834,26.541,26.626,31.749,20.201,31.749z">
+                            </path>
+                            <path class="fill-current" d="M26.013,10.047l1.654-2.866c-2.198-1.272-4.743-2.012-7.466-2.012h0v3.312h0
+C22.32,8.481,24.301,9.057,26.013,10.047z" transform="rotate(294.22 20 20)">
+                                <animateTransform attributeType="xml" attributeName="transform" type="rotate"
+                                    from="0 20 20" to="360 20 20" dur="0.5s" repeatCount="indefinite">
+                                </animateTransform>
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div id="subscribe-success">
+                <strong>Great!</strong> Check your inbox (or spam folder) for an email containing a magic link.
+            </div>
+            <div id="subscribe-error">
+                Sorry, something went wrong. Please try again.
             </div>
         </form>
     </div>
