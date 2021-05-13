@@ -1,38 +1,29 @@
-{{!< default}}
-
-{{#post}}
-
-<header>
+{{!< default}} {{#post}} <header>
     <h3 class="mb-4 text-lg font-semibold md:mb-6 md:text-2xl">
         <a href="/" title="{{@site.title}}">{{@site.title}}</a>
     </h3>
-</header>
+    </header>
 
-<main>
-    <h1 class="text-xl font-semibold md:mb-4 md:text-3xl">{{{title}}}</h1>
-    <div class="flex my-2 text-sm md:text-base">
-        {{#primary_author}}
-        <a class="flex space-x-2 group" href="{{twitter_url}}" target="_blank" rel="noreferrer">
-          <img
-            src="{{profile_image}}"
-            class="w-6 h-6 rounded-full"
-          />
-          <span class="font-semibold group-hover:underline">{{name}}</span>
-        </a>
-        {{/primary_author}}
-        <div class="mx-2">/</div>
-        <div class="italic">{{date format="MMMM DD, YYYY"}}</div>
-        <div class="mx-2">/</div>
-        <div class="italic">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</div>
-        {{#if tags}}
-                <div class="mx-2">/</div>
-                <div class="italic post-tags">
+    <main>
+        <h1 class="text-2xl font-semibold md:mb-4 md:text-3xl">{{{title}}}</h1>
+        <ul class="flex flex-wrap my-2 space-x-1 text-sm md:text-base post-meta">
+            {{#primary_author}}
+            <li><a class="group" href="{{twitter_url}}" target="_blank" rel="noreferrer">
+                    <img src="{{profile_image}}" class="inline-block w-6 h-6 mr-1 -mt-1 rounded-full" />
+                    <span class="font-semibold group-hover:underline">{{name}}</span>
+                </a></li>
+            {{/primary_author}}
+            <li class="italic">{{date format="MMMM DD, YYYY"}}</li>
+            <li class="hidden italic lg:block">{{reading_time minute=(t "1 min read") minutes=(t "% min read")}}</li>
+            {{#if tags}}
+            <li class="italic post-tags">
                 {{#foreach tags}}
-                    <span class="tag"><a href="{{url}}" title="{{name}}" class="no-underline text-accent hover:underline">{{name}}</a></span>
+                <span class="tag"><a href="{{url}}" title="{{name}}"
+                        class="no-underline text-accent hover:underline">{{name}}</a></span>
                 {{/foreach}}
-                </div>
-        {{/if}}
-      </div>
+            </li>
+            {{/if}}
+        </ul>
         <article class="max-w-full mt-6 prose md:mt-8 lg:prose-xl dark:text-white">
             {{content}}
         </article>
@@ -41,67 +32,43 @@
         <ul class="flex flex-col mb-4 md:mb-6 md:flex-row md:flex-wrap">
             {{#next_post}}
             <li class="flex-1 mb-2 md:mb-0">
-                <a
-                    href="{{url}}"
-                    title="{{title}}"
-                    class="flex flex-col items-center w-full md:items-start group"
-                >
+                <a href="{{url}}" title="{{title}}" class="flex flex-col items-center w-full md:items-start group">
                     <div class="flex items-center">
-                    <svg
-                        width="2em"
-                        height="2em"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#999"
-                        strokeWidth="1"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        class="hidden md:inline-block"
-                    >
-                        <polyline points="15 18 9 12 15 6" />
-                    </svg>
-                    <div class="mb-1 md:ml-1">
-                        <div class="italic text-center text-gray-600 md:text-left dark:text-gray-200">Previous Post</div>
-                        <span class="text-sm font-semibold text-accent group-hover:underline md:text-lg">
-                        {{title}}
-                        </span>
-                    </div>
+                        <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="1"
+                            strokeLinecap="round" strokeLinejoin="round" class="hidden md:inline-block">
+                            <polyline points="15 18 9 12 15 6" />
+                        </svg>
+                        <div class="mb-1 md:ml-1">
+                            <div class="italic text-center text-gray-600 md:text-left dark:text-gray-200">Previous Post
+                            </div>
+                            <span class="text-sm font-semibold text-accent group-hover:underline md:text-lg">
+                                {{title}}
+                            </span>
+                        </div>
                     </div>
                 </a>
             </li>
             {{/next_post}}
             {{#prev_post}}
             <li class="flex-1 mb-2 md:mb-0">
-                <a
-                    href="{{url}}"
-                    title="{{title}}"
-                    class="flex flex-col items-center w-full md:items-end group"
-                >
+                <a href="{{url}}" title="{{title}}" class="flex flex-col items-center w-full md:items-end group">
                     <div class="flex items-center">
-                    <div class="mt-1 md:mr-1">
-                        <div class="italic text-center text-gray-600 dark:text-gray-200 md:text-right">Next Post</div>
-                        <span class="text-sm font-semibold text-accent group-hover:underline md:text-lg">
-                        {{title}}
-                        </span>
-                    </div>
-                    <svg
-                        width="2em"
-                        height="2em"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="#999"
-                        strokeWidth="1"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        class="hidden md:inline-block"
-                    >
-                        <polyline points="9 18 15 12 9 6" />
-                    </svg>
+                        <div class="mt-1 md:mr-1">
+                            <div class="italic text-center text-gray-600 dark:text-gray-200 md:text-right">Next Post
+                            </div>
+                            <span class="text-sm font-semibold text-accent group-hover:underline md:text-lg">
+                                {{title}}
+                            </span>
+                        </div>
+                        <svg width="2em" height="2em" viewBox="0 0 24 24" fill="none" stroke="#999" strokeWidth="1"
+                            strokeLinecap="round" strokeLinejoin="round" class="hidden md:inline-block">
+                            <polyline points="9 18 15 12 9 6" />
+                        </svg>
                     </div>
                 </a>
             </li>
             {{/prev_post}}
         </ul>
-</main>
+    </main>
 
-{{/post}}
+    {{/post}}

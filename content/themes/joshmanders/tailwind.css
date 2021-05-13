@@ -9,6 +9,13 @@
 }
 
 @layer components {
+  .post-meta {
+    li:not(:last-child)::after {
+      content: '/';
+      @apply text-gray-500 pl-2 pr-1;
+    }
+  }
+
   .post-tags {
     .tag::after {
       content: ', ';
